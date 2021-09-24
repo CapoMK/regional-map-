@@ -1,5 +1,5 @@
-# regional-map-
-## This is the repository for our regional map project.
+# Where To Live
+## This is the repository for our project.
 We are working on a project that will showcase different regional areas in Finland for someone who might be interested in moving. 
 
 ## 21.9.2021
