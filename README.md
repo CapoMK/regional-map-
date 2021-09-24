@@ -9,3 +9,4 @@ We also updated our project plan and returned it once again.
 
 ## 24.9.2021
 Today we started looking into Python and 'Pandas', in order to import excel files (our data for the project) into python, and from there, to our map.
+We downloaded Anaconda and Pandas and used some time to familiarize ourselves with these. We also tried to find some more open data that we could use and implement onto our map. Familiarizing ourselves with new platforms takes surprisingly a lot of time.
