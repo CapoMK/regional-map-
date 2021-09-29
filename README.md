@@ -22,3 +22,19 @@ Today we started by checking out the possible functionality of Pandas. In its cu
 //Matias comments 
 
 I'm currently stuck at the part after creating the environment. With the Anaconda Prompt it gets stuck after trying to use commands since they are not recognized as internal or external commands. 
+
+//end of comments
+
+
+//Matias comments
+
+I resolved this by switching over to the Anaconda Navigator and to using Python instead of the prompt. Then after running:
+
+"import pandas as pd"
+
+"df = pd.read_excel (r'Path where the Excel file is stored\File name.xlsx')"
+"print (df)"
+
+I was able to get a fairly look at the piece of Excel data we are currently working with.
+
+//end of comments
