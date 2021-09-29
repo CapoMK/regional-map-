@@ -18,3 +18,7 @@ We downloaded Anaconda and Pandas and used some time to familiarize ourselves wi
 ## 29.9.2021 
 
 Today we started by checking out the possible functionality of Pandas. In its current state we tried to run the commands on the Anaconda Prompt by using "activate name_of_my_env" but quickly realized that the directory was out of place. We got an error saying that the commands were not recognized as internal or external commands by the prompt. After this we headed over to https://www.geeksforgeeks.org/set-up-virtual-environment-for-python-using-anaconda/ and started to install a new environment into Anaconda Prompt by using the command "conda create -n envname python=x.x anaconda" where we specified the name for our environment as "pandamaailma" and the version as version 3.9.
+
+//Matias comments 
+
+I'm currently stuck at the part after creating the environment. With the Anaconda Prompt it gets stuck after trying to use commands since they are not recognized as internal or external commands. 
