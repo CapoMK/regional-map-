@@ -48,3 +48,27 @@ We continued banging our head against the wall with Pandas, and decided to try d
 Matias was pulling his hair out with excel-files that had coordinates on them as a test. I kept looking for more data on Helsinki that we could use and stumbled upon https://kartta.hel.fi/ws/geoserver/avoindata/wfs. It has almost every possible segmentation of Helsinki we could hope for ready, so we might not even need to add any coordinates on the map ourselves. I might be speaking only for myself, but I feel like now we have a lot better grasp on how to use QGIS.
 
 //end of comments
+
+
+//Matias comments 
+
+We removed everything extra from the Excel file and we made the Excel file smaller. 
+
+By removing the extras, we were able to get the file onto Pandas and the file looked a lot neater. 
+
+Right now we're figuring out a method of integrating the Excel-files as they are directly onto QGIS without the need for Pandas or any other methods. 
+
+We've tried downloading XYTools plugin onto QGIS but we figured out that the version would have to be 2.18 max. We're currently running 3.16 and would need to downgrade.
+
+I downgraded the version to 2.18 by downloading the QGIS version independently from the internet. Unfortunately I ran into a problem with getting the Google Hybrid environment to work on the older version so I decided that we're gonna go back to using QGIS 3.16.
+
+I then tried to get the Excel into the delimited text format and to get that onto QGIS in its entirety. It showed some dots but the dots were out of place and non-configurable. 
+
+Jesse found out a way to get some data in WFS-format by directly inputting it onto QGIS. This worked out well and we were able to take a look at the data that was there by default. I went ahead and changed the opacity to make it more clear on the viewer. 
+
+// end of comments 
+
+
+
+
+
