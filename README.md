@@ -38,3 +38,13 @@ I resolved this by switching over to the Anaconda Navigator and to using Python 
 I was able to get a fairly look at the piece of Excel data we are currently working with.
 
 //end of comments
+
+## 1.10.2021
+
+We continued banging our head against the wall with Pandas, and decided to try directly implementing excel-files into our datamap.
+
+//Jesse comments
+
+Matias was pulling his hair out with excel-files that had coordinates on them as a test. I kept looking for more data on Helsinki that we could use and stumbled upon https://kartta.hel.fi/ws/geoserver/avoindata/wfs. It has almost every possible segmentation of Helsinki we could hope for ready, so we might not even need to add any coordinates on the map ourselves. I might be speaking only for myself, but I feel like now we have a lot better grasp on how to use QGIS.
+
+//end of comments
