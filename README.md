@@ -98,6 +98,10 @@ https://docs.geoserver.org/latest/en/user/services/wfs/outputformats.html
 http://geoserver.org/
 http://www.qgistutorials.com/en/docs/3/web_mapping_with_qgis2web.html
 
+Converting excel files into qgis:
+
+https://geospatialro.wordpress.com/2017/07/12/how-to-convert-excel-to-gis-data-in-qgis-using-spreadsheet-layers-plugin/
+
 // Santeri comments 
 
 
