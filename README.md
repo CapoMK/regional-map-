@@ -72,5 +72,33 @@ Jesse found out a way to get some data in WFS-format by directly inputting it on
 
 Some great pöhinä was made today. Jesse kept looking for more open data (and looked at licensing of our previous data just to be sure). All of the data this far is under CC BY 4.0. Matias and Santeri gave thought on how to bring the data to the end user. We have a vision on what we want the end product to be like, and we tried to find multiple solutions on how to get to our goal.
 
+We added more data on top of the QGIS environment. Then we stared to think about how we can block out certain areas by making them invisible so that we could highlight the different areas altogether. So far nothing comes to mind since you can't really change the opacity on certain very specific layers, instead you can just zone out the opacity altogether by making it between 0 and 100%. This does not serve our purpose at all since currently there's no way to adjust the opacity of specific layers. 
+
+
+
+
+// Santeri comments 
+
+Data which we want to include in our map:
+
+Train stations
+Subway stations
+Age
+Education
+Highways
+
+We looked for more data to our map, like the population information grid, which we are trying to integrate into our map
+Matias installed qgis2Web, and now we are trying to get it to work and find out what it does.
+The next step is to find out, how to properly implement education levels into our map, and where to get the proper data to do so.
+
+
+Links for our next step, integrating the qgis to a website, with better User Interface:
+
+https://docs.geoserver.org/latest/en/user/services/wfs/outputformats.html
+http://geoserver.org/
+http://www.qgistutorials.com/en/docs/3/web_mapping_with_qgis2web.html
+
+// Santeri comments 
+
 
 
