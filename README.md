@@ -68,7 +68,9 @@ Jesse found out a way to get some data in WFS-format by directly inputting it on
 
 // end of comments 
 
+## 8.10.2021
 
+Some great pöhinä was made today. Jesse kept looking for more open data (and looked at licensing of our previous data just to be sure). All of the data this far is under CC BY 4.0. Matias and Santeri gave thought on how to bring the data to the end user. We have a vision on what we want the end product to be like, and we tried to find multiple solutions on how to get to our goal.
 
 
 
