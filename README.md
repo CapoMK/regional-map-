@@ -108,3 +108,5 @@ https://geospatialro.wordpress.com/2017/07/12/how-to-convert-excel-to-gis-data-i
 
 Today we started by adding some new files to our git. We now have all the needed licenses under their own .md-file.
 
+we thought of ways to implement more data into the map, mainly thought of ways in to how to use or reformat excel files into something we can use in our map
+We thought of using polygons in our map, and define different areas inside certain polygons, probably not going to work but it's worth a try
