@@ -1,4 +1,4 @@
-Licenses on our data
+*Licenses on our data*
 
 https://kartta.hel.fi/ws/geoserver/avoindata/wfs
 
