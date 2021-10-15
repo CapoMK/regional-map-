@@ -104,5 +104,7 @@ https://geospatialro.wordpress.com/2017/07/12/how-to-convert-excel-to-gis-data-i
 
 // Santeri comments 
 
+## 15.10.2021
 
+Today we started by adding some new files to our git. We now have all the needed licenses under their own .md-file.
 
