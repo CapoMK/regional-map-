@@ -116,4 +116,5 @@ We thought of using polygons in our map, and define different areas inside certa
 Today we looked at some ways to incorporate our map into a webclient, so that it is easier to access by potential users.
 
 https://github.com/qgis/qwc2-demo-app
+
 https://gis.stackexchange.com/questions/28733/how-to-publish-my-map-on-the-web
