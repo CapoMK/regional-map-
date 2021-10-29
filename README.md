@@ -110,3 +110,10 @@ Today we started by adding some new files to our git. We now have all the needed
 
 we thought of ways to implement more data into the map, mainly thought of ways in to how to use or reformat excel files into something we can use in our map
 We thought of using polygons in our map, and define different areas inside certain polygons, probably not going to work but it's worth a try
+
+## 29.10.2021
+
+Today we looked at some ways to incorporate our map into a webclient, so that it is easier to access by potential users.
+
+https://github.com/qgis/qwc2-demo-app
+https://gis.stackexchange.com/questions/28733/how-to-publish-my-map-on-the-web
