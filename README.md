@@ -118,3 +118,11 @@ Today we looked at some ways to incorporate our map into a webclient, so that it
 https://github.com/qgis/qwc2-demo-app
 
 https://gis.stackexchange.com/questions/28733/how-to-publish-my-map-on-the-web
+
+## 5.11.20201
+
+Today we integrated our qgis file to a website with qgis2web plugin. the next step is to add functionality with javascript functions and HTML buttons, to showcase different areas to live in. We also looked into the CSS of the file, and after we get our functionality, we're going to make the page look better with CSS and HTML variables.
+
+https://www.qgistutorials.com/en/docs/web_mapping_with_qgis2web.html
+
+https://www.youtube.com/watch?v=WFO3Xe0uD5k&t=90s
