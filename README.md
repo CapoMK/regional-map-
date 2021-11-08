@@ -135,6 +135,7 @@ https://leafletjs.com/examples/quick-start/
 Visual Studio Code is simply too useless while used in a browser, it doesn't support any of the needed add-ons. 
 
 //Jesse comments:
+
 I couldn't get the shared file to work on the app either, every time I tried to open it, the Visual Studio Code app just froze.
 //end of comment
 
