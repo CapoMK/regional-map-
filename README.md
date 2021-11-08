@@ -137,6 +137,7 @@ Visual Studio Code is simply too useless while used in a browser, it doesn't sup
 //Jesse comments:
 
 I couldn't get the shared file to work on the app either, every time I tried to open it, the Visual Studio Code app just froze.
+
 //end of comment
 
 We started compiling coordinates on a text file, so we'd have them ready to implement on our map whenever it's time for that.
