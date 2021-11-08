@@ -119,7 +119,7 @@ https://github.com/qgis/qwc2-demo-app
 
 https://gis.stackexchange.com/questions/28733/how-to-publish-my-map-on-the-web
 
-## 5.11.20201
+## 5.11.2021
 
 Today we integrated our qgis file to a website with qgis2web plugin. the next step is to add functionality with javascript functions and HTML buttons, to showcase different areas to live in. We also looked into the CSS of the file, and after we get our functionality, we're going to make the page look better with CSS and HTML variables. 
 We figured that we will end up using "leaflets" in javascript, it seems to be a better tool overall when it comes to web mapping.
@@ -129,3 +129,15 @@ https://www.qgistutorials.com/en/docs/web_mapping_with_qgis2web.html
 https://www.youtube.com/watch?v=WFO3Xe0uD5k&t=90s
 
 https://leafletjs.com/examples/quick-start/
+
+## 8.11.2021
+
+Visual Studio Code is simply too useless while used in a browser, it doesn't support any of the needed add-ons. 
+
+//Jesse comments:
+I couldn't get the shared file to work on the app either, every time I tried to open it, the Visual Studio Code app just froze.
+//end of comment
+
+We started compiling coordinates on a text file, so we'd have them ready to implement on our map whenever it's time for that.
+
+Santeri started working on buttons on our website.
