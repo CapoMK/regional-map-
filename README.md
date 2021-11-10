@@ -154,7 +154,7 @@ We tried to get polygons to work on our map, to properly indicate areas on the m
     [60.169032, 24.959085],
     [60.163120, 24.969633],
     [60.169030, 24.977590]
-]).addTo(map);
+    ]).addTo(map);
 
 It even shows the popup message inside the coordinates, but the polygon is still not visible: 
 polygon.bindPopup("<b>Katajannokka</b>").openPopup();
