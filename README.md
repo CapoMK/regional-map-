@@ -146,8 +146,6 @@ Santeri started working on buttons on our website.
 
 ## 10.11.2021
 
-We continued compiling our coordinates onto a text file. 
-
 We tried to get polygons to work on our map, to properly indicate areas on the map, but for some reason the polygon appears on the map on a refresh but instantly vanishes.
 
        var polygon = L.polygon([
@@ -158,3 +156,5 @@ We tried to get polygons to work on our map, to properly indicate areas on the m
 
 It even shows the popup message inside the coordinates, but the polygon is still not visible: 
 polygon.bindPopup("<b>Katajannokka</b>").openPopup();
+
+We also finished compiling all of the neighbourhoods of Helsinki, their post numbers and coordinates into a single text file.
