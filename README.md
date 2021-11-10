@@ -143,3 +143,18 @@ I couldn't get the shared file to work on the app either, every time I tried to 
 We started compiling coordinates on a text file, so we'd have them ready to implement on our map whenever it's time for that.
 
 Santeri started working on buttons on our website.
+
+## 10.11.2021
+
+We continued compiling our coordinates onto a text file. 
+
+We tried to get polygons to work on our map, to properly indicate areas on the map, but for some reason the polygon appears on the map on a refresh but instantly vanishes.
+
+       var polygon = L.polygon([
+    [60.169032, 24.959085],
+    [60.163120, 24.969633],
+    [60.169030, 24.977590]
+]).addTo(map);
+
+It even shows the popup message inside the coordinates, but the polygon is still not visible: 
+polygon.bindPopup("<b>Katajannokka</b>").openPopup();
