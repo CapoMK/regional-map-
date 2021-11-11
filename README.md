@@ -161,4 +161,7 @@ We also finished compiling all of the neighbourhoods of Helsinki, their post num
 
 ## 11.11.2021
 
-We worked on different ways of showing the data efficiently on the map and having different visible layers on it. We now have a clear goal in sight, and find it achieveable in our timeframe. We have to use the coordinates that we have compiled to create buttons for every neighborhood and link all the data we want to use into those buttons. After that it's mostly just cleaning up and polishing the site we're gonna have this data on.
+We worked on different ways of showing the data efficiently on the map and having different visible layers on it.
+We now have a clear goal in sight, and find it achieveable in our timeframe.
+We have to use the coordinates that we have compiled to create buttons for every neighborhood and link all the data we want to use into those buttons.
+After that it's mostly just cleaning up and polishing the site we're gonna have this data on.
