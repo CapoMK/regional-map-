@@ -43,11 +43,11 @@
         <br>
     </br>
 
-    <p>This map will pick the perfect area inside Helsinki for you to live.</p>
+    <h2>This map will pick the perfect area inside Helsinki for you to live.</h2>
     <br>
 </br>
 
-<p>First we need to know a couple of things about you.</p>
+<h3>First we need to know a couple of things about you.</h3>
 
 <br>
 </br>
@@ -55,75 +55,49 @@
 
 
 
-
-
-
-
-
-
-<form id="multichoice1">
-
-    <p id="prompt">Do you prefer good public transport or good parking areas?</p>
-<br>
-</br>
-
-    <div id="choice">
-    <input type="radio" id="transport" name="answer" value="Public Transport">
-    <label for="html">Public transport</label><br></br>
-    <input type="radio" id="Parking" name="answer" value="Parking areas">
-    <label for="css">Parking areas</label><br></br>
-    <input type="radio" id="no difference" name="answer" value="no difference">
-    <label for="javascript">No difference</label><br></br>
-  
-    <br>  
-    </div>  
+<form id="form1">
+    <p>Do you prefer an area with good public transport or good parking?</p>
+    <input type="radio" id="html" name="live" value="HTML">
+    <label for="trans">Public transport</label><br>
+    <input type="radio" id="css" name="live" value="CSS">
+    <label for="css">Good parking</label><br>
+    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <label for="javascript">Doesn't matter</label>
 
   </form>
 
+  <form id="form2">
+    <p>Is the cost level of housing important to you?</p>
+    <input type="radio" id="html" name="live" value="HTML">
+    <label for="trans">No, the cost level does not matter at all</label><br>
+    <input type="radio" id="css" name="live" value="CSS">
+    <label for="css">Yes, the area should be inexpensive</label><br>
+    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <label for="javascript">Doesn't matter</label>
 
+  </form>
 
+  <form id="form3">
+    <p>Would you like your area to be full of everyday services and activities?</p>
+    <input type="radio" id="html" name="live" value="HTML">
+    <label for="trans">Yes</label><br>
+    <input type="radio" id="css" name="live" value="CSS">
+    <label for="css">No</label><br>
+    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <label for="javascript">Doesn't matter</label>
 
+  </form>
 
-<div id="next1">
+  <form id="form4">
+    <p>Does the level of noise affect your housing area decision?</p>
+    <input type="radio" id="html" name="live" value="HTML">
+    <label for="trans">Yes</label><br>
+    <input type="radio" id="css" name="live" value="CSS">
+    <label for="css">No</label><br>
+    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <label for="javascript">Doesn't matter</label>
 
-
-
-<button onclick="Next1()">Next</button>
-
-
-<script>
-
-// gets the forms and assigns them to variables //
-var mc1 = document.getElementById("multichoice1");
-
-var mc2 = document.getElementById("multichoice2");
-
-var mc3 = document.getElementById("multichoice3");
-
-var mc4 = document.getElementById("multichoice4");
-
-
-
-
-function Next1(){
-
-
-// sets the innerHTML to be invisible //
-mc1.innerHTML = "";
-
-
-};
-
-
-
-
-
-
-
-</script>
-</div>
-  
-
+  </form>
 
 
 
