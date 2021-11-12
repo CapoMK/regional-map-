@@ -16,8 +16,9 @@
             height: 600px;
             margin-left: 460px;
             margin-right: 10px;
-            margin-top: 280px;
+            margin-top: 150px;
             margin-bottom: 300px;
+            background-color: #000000
         }
 
 
@@ -53,81 +54,80 @@
 
 
 
-<div id ="grid" style="overflow-x:auto;">
-    <table class="w-100">
-      <tr>
-        <td class="border"></td>
-        <td class="border">Somewhat important</td>
-        <td class="border">Very important</td>
-        <td class="border">Not important</td>
-      </tr>
-      <tr>
-        <td class="border">Is good public transport important to you?</td>
-        <td class="border">
-          <div class="custom-control custom-radio"><input type="radio" id="option1" name="row1" value="???" class="custom-control-input">
-            <label class="custom-control-label" for="option1"></label></div>
-        </td>
-        <td class="border">
-          <div class="custom-control custom-radio"><input type="radio" id="option2" name="row1" value="???" class="custom-control-input">
-            <label class="custom-control-label" for="option2"></label></div>
-        </td>
-        <td class="border">
-            <div class="custom-control custom-radio"><input type="radio" id="option3" name="row1" value="???" class="custom-control-input">
-              <label class="custom-control-label" for="option3"></label></div>
-          </td>
-      </tr>
-    </table>
-  </div>
 
+
+
+
+
+
+
+<form id="multichoice1">
+
+    <p id="prompt">Do you prefer good public transport or good parking areas?</p>
+<br>
+</br>
+
+    <div id="choice">
+    <input type="radio" id="transport" name="answer" value="Public Transport">
+    <label for="html">Public transport</label><br></br>
+    <input type="radio" id="Parking" name="answer" value="Parking areas">
+    <label for="css">Parking areas</label><br></br>
+    <input type="radio" id="no difference" name="answer" value="no difference">
+    <label for="javascript">No difference</label><br></br>
   
+    <br>  
+    </div>  
+
+  </form>
 
 
 
-<button onclick="Pohina()">Submit</button>
 
-<p id="demo"></p>
+
+<div id="next1">
+
+
+
+<button onclick="Next1()">Next</button>
+
 
 <script>
 
-/* The function should be able to do the following things: 
+// gets the forms and assigns them to variables //
+var mc1 = document.getElementById("multichoice1");
 
-1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
+var mc2 = document.getElementById("multichoice2");
 
-2. Zoom the map to focus on the marker. (nice to have feature)
+var mc3 = document.getElementById("multichoice3");
 
-3. Show the reasons on text that make the specific area suitable in the first place. (popup)
-
-4. The function must also specify the areas in plural that are suitable for the respondent. 
-
-*/
-
-
-function Pohina() {
-
-  document.getElementById("demo").innerHTML = "This is the perfect area for you.";
-
-
-    // this defines the marker opacity //
-  suurpiiri1.setOpacity(1.0);
-  
-
-
-    // this binds a new popup to the marker itself //
-  suurpiiri1.bindPopup("<b>You like good public transport, good service availability.</b><br>").openPopup();
+var mc4 = document.getElementById("multichoice4");
 
 
 
-    //This sets the opacity of the main layer to be 0.9 //
-  layer_GoogleHybrid_0.setOpacity(0.97);
 
-  
+function Next1(){
+
+
+// sets the innerHTML to be invisible //
+mc1.innerHTML = "";
+
+
 };
 
 
 
 
 
+
+
 </script>
+</div>
+  
+
+
+
+
+
 
         <div id="map">
         </div>
