@@ -72,6 +72,8 @@
         });
         layer_GoogleHybrid_0;
         map.addLayer(layer_GoogleHybrid_0);
+
+        
         function pop_Seutukartta_liikenne_juna_asema_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -87,16 +89,61 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-
-
         
-        // Markkerit alueille kantakaupunki //
 
-        var polygon = L.polygon([
-    [60.16111012127764, 25.93771959579682],
-    [60.36111012127764, 25.13771959579682],
-    [60.66111012127764, 25.43771959579682]
-    ]).addTo(map);
+        // Suurpiirit //
+
+        var suurpiiri1 = L.marker([60.168469461561536, 24.94051244901858]).addTo(map);
+        suurpiiri1.bindPopup("<b>South Helsinki</b><br>Southern Major District").openPopup();
+
+        suurpiiri1.setOpacity (0.8);
+
+
+        var suurpiiri2 = L.marker([60.197483495056204, 24.931579792222763]).addTo(map);
+        suurpiiri2.bindPopup("<b>Helsinki Central </b><br>Central Major District").openPopup();
+
+        suurpiiri2.setOpacity(0.8);
+
+
+        var suurpiiri3 = L.marker([60.22190779360781, 24.896233151338762]).addTo(map);
+        suurpiiri3.bindPopup("<b>Helsinki West </b><br>Western Major District").openPopup();
+
+        suurpiiri3.setOpacity(0.8);
+
+
+        var suurpiiri4 = L.marker([60.234987362157014, 24.95557518935707]).addTo(map);
+        suurpiiri4.bindPopup("<b>Helsinki North</b><br>Northern Major District").openPopup();
+
+        suurpiiri4.setOpacity(0.8);
+        
+
+
+        var suurpiiri5 = L.marker([60.26055869396149, 25.02100349314523]).addTo(map);
+        suurpiiri5.bindPopup("<b>Helsinki Northeast</b><br>North-Eastern Major District").openPopup();
+
+        suurpiiri5.setOpacity(0.8);
+        
+
+        var suurpiiri6 = L.marker([60.19032101074587, 25.027061996911623]).addTo(map);
+        suurpiiri6.bindPopup("<b>Helsinki Southeast</b><br>South-Eastern Major District").openPopup();
+
+        suurpiiri6.setOpacity(0.8);
+        
+
+       var suurpiiri7 = L.marker([60.214980435594, 25.079148763330014]).addTo(map);
+        suurpiiri7.bindPopup("<b>Helsinki East</b><br>Eastern Major District").openPopup();
+
+        suurpiiri7.setOpacity(0.8);
+
+
+
+        var suurpiiri8 = L.marker([60.251937174076886, 25.17739540858627]).addTo(map);
+        suurpiiri8.bindPopup("<b>Östersundom</b><br>Östersundom Major District").openPopup();
+
+        suurpiiri8.setOpacity(0.8);
+
+
+
 
 
 
