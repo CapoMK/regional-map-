@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
+
+        
         #map {
             width: 1000px;
             height: 600px;
@@ -17,9 +19,17 @@
             margin-top: 280px;
             margin-bottom: 300px;
         }
+
+
         </style>
+
+
         <title>Where to live</title>
+
+
     </head>
+
+
     <body>
 
 
@@ -40,6 +50,8 @@
 
 <br>
 </br>
+
+
 
 <div id ="grid" style="overflow-x:auto;">
     <table class="w-100">
@@ -67,6 +79,8 @@
     </table>
   </div>
 
+  
+
 
 
 <button onclick="Pohina()">Submit</button>
@@ -75,13 +89,13 @@
 
 <script>
 
-/* funktion tulee tehdä seuraavat asiat: 
+/* The function should be able to do the following things: 
 
-1. Säätää oikean markkerin/markkerien opasiteetti nollasta sataan niin että se menee näkyväksi kun funktiota painaa. 
+1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
 
-2. Zoomaa karttaa pieni määrä markkeria/markkereita kohti. (nice to have feature)
+2. Zoom the map to focus on the marker. (nice to have feature)
 
-3. Näyttää tekstillä syyt miksi kyseinen alue on henkilölle sopiva. (popup)
+3. Show the reasons on text that make the specific area suitable in the first place. (popup)
 
 4. The function must also specify the areas in plural that are suitable for the respondent. 
 
