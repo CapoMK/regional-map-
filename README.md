@@ -165,3 +165,7 @@ We worked on different ways of showing the data efficiently on the map and havin
 We now have a clear goal in sight, and find it achieveable in our timeframe.
 We have to use the coordinates that we have compiled to create buttons for every neighborhood and link all the data we want to use into those buttons.
 After that it's mostly just cleaning up and polishing the site we're gonna have this data on.
+
+## 12.11.2021
+
+Now we finally know how to use git properly. This might help us finish our project in time!
