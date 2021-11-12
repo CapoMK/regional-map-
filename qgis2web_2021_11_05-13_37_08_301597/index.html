@@ -13,7 +13,9 @@
             width: 1000px;
             height: 600px;
             margin-left: 460px;
-            margin-top: 220px;
+            margin-right: 10px;
+            margin-top: 280px;
+            margin-bottom: 300px;
         }
         </style>
         <title>Where to live</title>
@@ -27,26 +29,90 @@
         <h1>Where to Live</h1>
 
 
-
-
-        
-
         <br>
     </br>
 
     <p>This map will pick the perfect area inside Helsinki for you to live.</p>
-
     <br>
 </br>
 
-<button onclick="myFunction()">Click me</button>
+<p>First we need to know a couple of things about you.</p>
+
+<br>
+</br>
+
+<div id ="grid" style="overflow-x:auto;">
+    <table class="w-100">
+      <tr>
+        <td class="border"></td>
+        <td class="border">Somewhat important</td>
+        <td class="border">Very important</td>
+        <td class="border">Not important</td>
+      </tr>
+      <tr>
+        <td class="border">Is good public transport important to you?</td>
+        <td class="border">
+          <div class="custom-control custom-radio"><input type="radio" id="option1" name="row1" value="???" class="custom-control-input">
+            <label class="custom-control-label" for="option1"></label></div>
+        </td>
+        <td class="border">
+          <div class="custom-control custom-radio"><input type="radio" id="option2" name="row1" value="???" class="custom-control-input">
+            <label class="custom-control-label" for="option2"></label></div>
+        </td>
+        <td class="border">
+            <div class="custom-control custom-radio"><input type="radio" id="option3" name="row1" value="???" class="custom-control-input">
+              <label class="custom-control-label" for="option3"></label></div>
+          </td>
+      </tr>
+    </table>
+  </div>
+
+
+
+<button onclick="Pohina()">Submit</button>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
+
+/* funktion tulee tehdä seuraavat asiat: 
+
+1. Säätää oikean markkerin/markkerien opasiteetti nollasta sataan niin että se menee näkyväksi kun funktiota painaa. 
+
+2. Zoomaa karttaa pieni määrä markkeria/markkereita kohti. (nice to have feature)
+
+3. Näyttää tekstillä syyt miksi kyseinen alue on henkilölle sopiva. (popup)
+
+4. The function must also specify the areas in plural that are suitable for the respondent. 
+
+*/
+
+
+function Pohina() {
+
+  document.getElementById("demo").innerHTML = "This is the perfect area for you.";
+
+
+    // this defines the marker opacity //
+  suurpiiri1.setOpacity(1.0);
+  
+
+
+    // this binds a new popup to the marker itself //
+  suurpiiri1.bindPopup("<b>You like good public transport, good service availability.</b><br>").openPopup();
+
+
+
+    //This sets the opacity of the main layer to be 0.9 //
+  layer_GoogleHybrid_0.setOpacity(0.97);
+
+  
+};
+
+
+
+
+
 </script>
 
         <div id="map">
@@ -76,7 +142,7 @@ function myFunction() {
             pane: 'pane_GoogleHybrid_0',
             opacity: 1.0,
             attribution: '',
-            minZoom: 1,
+            minZoom: 0,
             maxZoom: 28,
             minNativeZoom: 0,
             maxNativeZoom: 18
@@ -306,205 +372,7 @@ function myFunction() {
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Seutukartta_liikenne_paatiet_4_0() {
-            return {
-                pane: 'pane_Seutukartta_liikenne_paatiet_4',
-                opacity: 1,
-                color: 'rgba(35,255,53,1.0)',
-                dashArray: '',
-                lineCap: 'square',
-                lineJoin: 'bevel',
-                weight: 1.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Seutukartta_liikenne_paatiet_4');
-        map.getPane('pane_Seutukartta_liikenne_paatiet_4').style.zIndex = 404;
-        map.getPane('pane_Seutukartta_liikenne_paatiet_4').style['mix-blend-mode'] = 'normal';
-        var layer_Seutukartta_liikenne_paatiet_4 = L.geoJson(null, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Seutukartta_liikenne_paatiet_4',
-            layerName: 'layer_Seutukartta_liikenne_paatiet_4',
-            style: style_Seutukartta_liikenne_paatiet_4_0,
-            pane: 'pane_Seutukartta_liikenne_paatiet_4',
-            onEachFeature: pop_Seutukartta_liikenne_paatiet_4
-        });
-        function getSeutukartta_liikenne_paatiet_4Json(geojson) {
-            layer_Seutukartta_liikenne_paatiet_4.addData(geojson);
-        };
-        bounds_group.addLayer(layer_Seutukartta_liikenne_paatiet_4);
-        map.addLayer(layer_Seutukartta_liikenne_paatiet_4);
-        function pop_Pysakointipaikat_alue_5(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['luokka'] !== null ? autolinker.link(feature.properties['luokka'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['luokka_nimi'] !== null ? autolinker.link(feature.properties['luokka_nimi'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tyyppi'] !== null ? autolinker.link(feature.properties['tyyppi'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kausi'] !== null ? autolinker.link(feature.properties['kausi'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['asukaspysakointitunnus'] !== null ? autolinker.link(feature.properties['asukaspysakointitunnus'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['paikan_asento'] !== null ? autolinker.link(feature.properties['paikan_asento'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['voimassaolo'] !== null ? autolinker.link(feature.properties['voimassaolo'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kesto'] !== null ? autolinker.link(feature.properties['kesto'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['pinta_ala'] !== null ? autolinker.link(feature.properties['pinta_ala'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['paikat_des'] !== null ? autolinker.link(feature.properties['paikat_des'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['paikat_ala'] !== null ? autolinker.link(feature.properties['paikat_ala'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['lisatieto'] !== null ? autolinker.link(feature.properties['lisatieto'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['pysayttamiskielto'] !== null ? autolinker.link(feature.properties['pysayttamiskielto'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['paivitetty_tietopalveluun'] !== null ? autolinker.link(feature.properties['paivitetty_tietopalveluun'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['datanomistaja'] !== null ? autolinker.link(feature.properties['datanomistaja'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_Pysakointipaikat_alue_5_0() {
-            return {
-                pane: 'pane_Pysakointipaikat_alue_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(243,28,239,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Pysakointipaikat_alue_5');
-        map.getPane('pane_Pysakointipaikat_alue_5').style.zIndex = 405;
-        map.getPane('pane_Pysakointipaikat_alue_5').style['mix-blend-mode'] = 'normal';
-        var layer_Pysakointipaikat_alue_5 = L.geoJson(null, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Pysakointipaikat_alue_5',
-            layerName: 'layer_Pysakointipaikat_alue_5',
-            style: style_Pysakointipaikat_alue_5_0,
-            pane: 'pane_Pysakointipaikat_alue_5',
-            onEachFeature: pop_Pysakointipaikat_alue_5
-        });
-        function getPysakointipaikat_alue_5Json(geojson) {
-            layer_Pysakointipaikat_alue_5.addData(geojson);
-        };
-        bounds_group.addLayer(layer_Pysakointipaikat_alue_5);
-        map.addLayer(layer_Pysakointipaikat_alue_5);
-        function pop_Tyopaikkaruudukko_2018_6(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['index'] !== null ? autolinker.link(feature.properties['index'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tplkm'] !== null ? autolinker.link(feature.properties['tplkm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tphklkm'] !== null ? autolinker.link(feature.properties['tphklkm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_max'] !== null ? autolinker.link(feature.properties['tptolk_max'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_a'] !== null ? autolinker.link(feature.properties['tptolk_a'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_e'] !== null ? autolinker.link(feature.properties['tptolk_e'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_s'] !== null ? autolinker.link(feature.properties['tptolk_s'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_q'] !== null ? autolinker.link(feature.properties['tptolk_q'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_f'] !== null ? autolinker.link(feature.properties['tptolk_f'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_r'] !== null ? autolinker.link(feature.properties['tptolk_r'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_j'] !== null ? autolinker.link(feature.properties['tptolk_j'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_p'] !== null ? autolinker.link(feature.properties['tptolk_p'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_o'] !== null ? autolinker.link(feature.properties['tptolk_o'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_i'] !== null ? autolinker.link(feature.properties['tptolk_i'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_b'] !== null ? autolinker.link(feature.properties['tptolk_b'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_g'] !== null ? autolinker.link(feature.properties['tptolk_g'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_x'] !== null ? autolinker.link(feature.properties['tptolk_x'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_k'] !== null ? autolinker.link(feature.properties['tptolk_k'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_u'] !== null ? autolinker.link(feature.properties['tptolk_u'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_d'] !== null ? autolinker.link(feature.properties['tptolk_d'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_c'] !== null ? autolinker.link(feature.properties['tptolk_c'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_l'] !== null ? autolinker.link(feature.properties['tptolk_l'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_h'] !== null ? autolinker.link(feature.properties['tptolk_h'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_n'] !== null ? autolinker.link(feature.properties['tptolk_n'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_t'] !== null ? autolinker.link(feature.properties['tptolk_t'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tptolk_m'] !== null ? autolinker.link(feature.properties['tptolk_m'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
+       
 
         function style_Tyopaikkaruudukko_2018_6_0() {
             return {
