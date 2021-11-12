@@ -168,4 +168,4 @@ After that it's mostly just cleaning up and polishing the site we're gonna have 
 
 ## 12.11.2021
 
-We spent multiple hours familiarizing ourselves with the ins & outs of how to work with git to get our work more organized. We've clearly wasted hours of valuable worktime on doing things the hard way, when we could've done things much simpler.
+We spent multiple hours familiarizing ourselves with the ins & outs of how to work with git to get our work more organized. We've clearly wasted hours of valuable worktime on doing things the hard way, when we could've done things much simpler. We decided to first focus on the eight Helsinki major districts as the areas we have on our map, as it's clearer for us to test on fewer variables.
