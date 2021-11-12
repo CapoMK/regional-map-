@@ -104,7 +104,7 @@ HELSINKI NEIGHBOURHOODS
 
 52 Suomenlinna NO POST NUMBER // 60.1454027, 24.9859514
 
-53 Ulkosaaret 00860 // 60.1374237, 24.9127053 (pihlajasaaren koordinaatit)
+53 Ulkosaaret 00860 // 60.1374237, 24.9127053 (pihlajasaari coordinates)
 
 54 Vuosaari 00960, 00980, 00990 // 60.2143157, 25.111263
 
