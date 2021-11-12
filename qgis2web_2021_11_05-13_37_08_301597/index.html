@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1000px;
+            height: 770px;
+            margin-left: 450px;
+        }
+        </style>
+        <title>Where to live</title>
+    </head>
+    <body>
+
+
+        <br>
+    </br>
+
+        <h1>Where to Live</h1>
+
+        <br>
+    </br>
+
+    <p>This map will pick the perfect area inside Helsinki for you to live.</p>
+
+    <br>
+</br>
+
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[60.04501268122076,24.625284448821272],[60.3158035961785,25.558720879803754]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_GoogleHybrid_0');
+        map.getPane('pane_GoogleHybrid_0').style.zIndex = 400;
+        var layer_GoogleHybrid_0 = L.tileLayer('http://mt0.google.com/vt/lyrs=y&hl=en&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleHybrid_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleHybrid_0;
+        map.addLayer(layer_GoogleHybrid_0);
+        function pop_Seutukartta_liikenne_juna_asema_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tietopalvelu_id'] !== null ? autolinker.link(feature.properties['tietopalvelu_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['asemapaikka'] !== null ? autolinker.link(feature.properties['asemapaikka'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['mtryhm'] !== null ? autolinker.link(feature.properties['mtryhm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+
+
+        
+        // Markkerit alueille kantakaupunki //
+
+
+
+        // Punavuori //
+        var punavuori = L.marker([60.16111012127764, 24.93771959579682]).addTo(map);
+        punavuori.bindPopup("<b>Punavuori</b><br>00120").openPopup();
+        
+        punavuori.setOpacity(0.7);
+
+        
+
+        // Eira //
+        var eira = L.marker([60.15504843979877, 24.938093866741628]).addTo(map);
+        eira.bindPopup("<b>Eira</b><br>00150").openPopup();
+      
+        eira.setOpacity (0.7);
+        
+
+        // Ullanlinna //
+        var ullis = L.marker([60.1583895916855, 24.949071100521163]).addTo(map);
+        ullis.bindPopup("<b>Ullanlinna</b><br>00140").openPopup();
+
+        ullis.setOpacity (0.7);
+
+
+        // Kaartinkaupunki //
+
+        var kaarti = L.marker([60.16514409577648, 24.948918497621555]).addTo(map);
+        kaarti.bindPopup("<b>Kaartinkaupunki</b><br>00130").openPopup();
+
+        kaarti.setOpacity(0.7);
+
+
+        // Hietalahti //
+
+        var hieta = L.marker([60.16311533997697, 24.925897042802855]).addTo(map);
+        hieta.bindPopup("<b>Hietalahti</b><br>00180").openPopup();
+
+        hieta.setOpacity(0.7);
+
+        
+        // Kluuvi //
+
+        var kluuvi = L.marker([60.172565608123904, 24.940193312806077]).addTo(map);
+        kluuvi.bindPopup("<b>Kluuvi</b><br>00100").openPopup();
+
+        kluuvi.setOpacity(0.7);
+
+
+        // Kamppi //
+
+        var kamppi = L.marker([60.167554521444885, 24.931256158528264]).addTo(map);
+        kamppi.bindPopup("<b>Kamppi</b><br>00100").openPopup();
+
+        kamppi.setOpacity(0.7);
+
+
+        // Hernesaari //
+
+        var herne = L.marker([60.15017948086472, 24.92737768211395]).addTo(map);
+        herne.bindPopup("<b>Hernesaari</b><br>00150").openPopup();
+
+        herne.setOpacity(0.7);
+
+        
+        // Jätkäsaari //
+
+        var jatka = L.marker([60.159656681187855, 24.918086990718557]).addTo(map);
+        jatka.bindPopup("<b>Jätkäsaari</b><br>00220").openPopup();
+
+        jatka.setOpacity(0.7);
+
+        
+        // Ruoholahti //
+
+        var ruoho = L.marker([60.163177464949094, 24.907766569662485]).addTo(map);
+        ruoho.bindPopup("<b>Ruoholahti</b><br>00180").openPopup();
+
+        ruoho.setOpacity(0.7);
+
+        
+        // Kruununhaka //
+
+        var krunikka = L.marker([60.172371844572105, 24.95670533099313]).addTo(map);
+        krunikka.bindPopup("<b>Kruununhaka</b><br>00170").openPopup();
+
+        krunikka.setOpacity(0.7);
+
+
+        // Skatta //
+
+        var skatta = L.marker([60.16619938444238, 24.9684695530398]).addTo(map);
+        skatta.bindPopup("<b>Katajanokka</b><br>00160").openPopup();
+
+        skatta.setOpacity(0.7);
+
+
+        // Töölö //
+
+        var töölö = L.marker([60.17926493696613, 24.92278330684528]).addTo(map);
+        töölö.bindPopup("<b>Töölö</b><br>00100-00250").openPopup();
+
+        töölö.setOpacity(0.7);
+
+
+        // Kallio //
+
+        var kallio = L.marker([60.183873324724495, 24.953189284118938]).addTo(map);
+        kallio.bindPopup("<b>Kallio and other areas</b><br>00500-00530").openPopup();
+
+        kallio.setOpacity(0.7);
+
+
+        // Pasila //
+
+        var pasila = L.marker([60.198714699071346, 24.933316890464404]).addTo(map);
+
+        pasila.bindPopup("<b>Pasila</b><br>00520").openPopup();
+
+        pasila.setOpacity(0.7);
+
+
+        // Laru //
+
+        var laru = L.marker([60.15829687611295, 24.873705626444632]).addTo(map);
+
+        laru.bindPopup("<b>Lauttasaari</b><br>00200").openPopup();
+
+        laru.setOpacity (0.7);
+
+
+        
+
+        function style_Seutukartta_liikenne_juna_asema_1_0() {
+            return {
+                pane: 'pane_Seutukartta_liikenne_juna_asema_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.8,
+                fillColor: 'rgba(65, 131, 215, 1)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Seutukartta_liikenne_juna_asema_1');
+        map.getPane('pane_Seutukartta_liikenne_juna_asema_1').style.zIndex = 401;
+        map.getPane('pane_Seutukartta_liikenne_juna_asema_1').style['mix-blend-mode'] = 'normal';
+        var layer_Seutukartta_liikenne_juna_asema_1 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Seutukartta_liikenne_juna_asema_1',
+            layerName: 'layer_Seutukartta_liikenne_juna_asema_1',
+            style: style_Seutukartta_liikenne_juna_asema_1_0,
+            pane: 'pane_Seutukartta_liikenne_juna_asema_1',
+            onEachFeature: pop_Seutukartta_liikenne_juna_asema_1
+        });
+        function getSeutukartta_liikenne_juna_asema_1Json(geojson) {
+            layer_Seutukartta_liikenne_juna_asema_1.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Seutukartta_liikenne_juna_asema_1);
+        map.addLayer(layer_Seutukartta_liikenne_juna_asema_1);
+        function pop_Seutukartta_liikenne_lentoasemat_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tietopalvelu_id'] !== null ? autolinker.link(feature.properties['tietopalvelu_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['lentokentta'] !== null ? autolinker.link(feature.properties['lentokentta'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['mtryhm'] !== null ? autolinker.link(feature.properties['mtryhm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Seutukartta_liikenne_lentoasemat_2_0() {
+            return {
+                pane: 'pane_Seutukartta_liikenne_lentoasemat_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.8,
+                fillColor: 'rgba(255,255,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Seutukartta_liikenne_lentoasemat_2');
+        map.getPane('pane_Seutukartta_liikenne_lentoasemat_2').style.zIndex = 402;
+        map.getPane('pane_Seutukartta_liikenne_lentoasemat_2').style['mix-blend-mode'] = 'normal';
+        var layer_Seutukartta_liikenne_lentoasemat_2 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Seutukartta_liikenne_lentoasemat_2',
+            layerName: 'layer_Seutukartta_liikenne_lentoasemat_2',
+            style: style_Seutukartta_liikenne_lentoasemat_2_0,
+            pane: 'pane_Seutukartta_liikenne_lentoasemat_2',
+            onEachFeature: pop_Seutukartta_liikenne_lentoasemat_2
+        });
+        function getSeutukartta_liikenne_lentoasemat_2Json(geojson) {
+            layer_Seutukartta_liikenne_lentoasemat_2.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Seutukartta_liikenne_lentoasemat_2);
+        map.addLayer(layer_Seutukartta_liikenne_lentoasemat_2);
+        function pop_Seutukartta_liikenne_metroasemat_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tietopalvelu_id'] !== null ? autolinker.link(feature.properties['tietopalvelu_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['metroasema'] !== null ? autolinker.link(feature.properties['metroasema'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['mtryhm'] !== null ? autolinker.link(feature.properties['mtryhm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Seutukartta_liikenne_metroasemat_3_0() {
+            return {
+                pane: 'pane_Seutukartta_liikenne_metroasemat_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 0.8,
+                fillColor: 'rgba(207,0,3,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Seutukartta_liikenne_metroasemat_3');
+        map.getPane('pane_Seutukartta_liikenne_metroasemat_3').style.zIndex = 403;
+        map.getPane('pane_Seutukartta_liikenne_metroasemat_3').style['mix-blend-mode'] = 'normal';
+        var layer_Seutukartta_liikenne_metroasemat_3 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Seutukartta_liikenne_metroasemat_3',
+            layerName: 'layer_Seutukartta_liikenne_metroasemat_3',
+            style: style_Seutukartta_liikenne_metroasemat_3_0,
+            pane: 'pane_Seutukartta_liikenne_metroasemat_3',
+            onEachFeature: pop_Seutukartta_liikenne_metroasemat_3
+        });
+        function getSeutukartta_liikenne_metroasemat_3Json(geojson) {
+            layer_Seutukartta_liikenne_metroasemat_3.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Seutukartta_liikenne_metroasemat_3);
+        map.addLayer(layer_Seutukartta_liikenne_metroasemat_3);
+        function pop_Seutukartta_liikenne_paatiet_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tietopalvelu_id'] !== null ? autolinker.link(feature.properties['tietopalvelu_id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tieluokka_nimi'] !== null ? autolinker.link(feature.properties['tieluokka_nimi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['nimi'] !== null ? autolinker.link(feature.properties['nimi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tieluokka_nro'] !== null ? autolinker.link(feature.properties['tieluokka_nro'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['mtryhm'] !== null ? autolinker.link(feature.properties['mtryhm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Seutukartta_liikenne_paatiet_4_0() {
+            return {
+                pane: 'pane_Seutukartta_liikenne_paatiet_4',
+                opacity: 1,
+                color: 'rgba(35,255,53,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Seutukartta_liikenne_paatiet_4');
+        map.getPane('pane_Seutukartta_liikenne_paatiet_4').style.zIndex = 404;
+        map.getPane('pane_Seutukartta_liikenne_paatiet_4').style['mix-blend-mode'] = 'normal';
+        var layer_Seutukartta_liikenne_paatiet_4 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Seutukartta_liikenne_paatiet_4',
+            layerName: 'layer_Seutukartta_liikenne_paatiet_4',
+            style: style_Seutukartta_liikenne_paatiet_4_0,
+            pane: 'pane_Seutukartta_liikenne_paatiet_4',
+            onEachFeature: pop_Seutukartta_liikenne_paatiet_4
+        });
+        function getSeutukartta_liikenne_paatiet_4Json(geojson) {
+            layer_Seutukartta_liikenne_paatiet_4.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Seutukartta_liikenne_paatiet_4);
+        map.addLayer(layer_Seutukartta_liikenne_paatiet_4);
+        function pop_Pysakointipaikat_alue_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['luokka'] !== null ? autolinker.link(feature.properties['luokka'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['luokka_nimi'] !== null ? autolinker.link(feature.properties['luokka_nimi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tyyppi'] !== null ? autolinker.link(feature.properties['tyyppi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['kausi'] !== null ? autolinker.link(feature.properties['kausi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['asukaspysakointitunnus'] !== null ? autolinker.link(feature.properties['asukaspysakointitunnus'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['paikan_asento'] !== null ? autolinker.link(feature.properties['paikan_asento'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['voimassaolo'] !== null ? autolinker.link(feature.properties['voimassaolo'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['kesto'] !== null ? autolinker.link(feature.properties['kesto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['pinta_ala'] !== null ? autolinker.link(feature.properties['pinta_ala'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['paikat_des'] !== null ? autolinker.link(feature.properties['paikat_des'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['paikat_ala'] !== null ? autolinker.link(feature.properties['paikat_ala'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['lisatieto'] !== null ? autolinker.link(feature.properties['lisatieto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['pysayttamiskielto'] !== null ? autolinker.link(feature.properties['pysayttamiskielto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['paivitetty_tietopalveluun'] !== null ? autolinker.link(feature.properties['paivitetty_tietopalveluun'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['datanomistaja'] !== null ? autolinker.link(feature.properties['datanomistaja'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Pysakointipaikat_alue_5_0() {
+            return {
+                pane: 'pane_Pysakointipaikat_alue_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(243,28,239,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Pysakointipaikat_alue_5');
+        map.getPane('pane_Pysakointipaikat_alue_5').style.zIndex = 405;
+        map.getPane('pane_Pysakointipaikat_alue_5').style['mix-blend-mode'] = 'normal';
+        var layer_Pysakointipaikat_alue_5 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Pysakointipaikat_alue_5',
+            layerName: 'layer_Pysakointipaikat_alue_5',
+            style: style_Pysakointipaikat_alue_5_0,
+            pane: 'pane_Pysakointipaikat_alue_5',
+            onEachFeature: pop_Pysakointipaikat_alue_5
+        });
+        function getPysakointipaikat_alue_5Json(geojson) {
+            layer_Pysakointipaikat_alue_5.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Pysakointipaikat_alue_5);
+        map.addLayer(layer_Pysakointipaikat_alue_5);
+        function pop_Tyopaikkaruudukko_2018_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['index'] !== null ? autolinker.link(feature.properties['index'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tplkm'] !== null ? autolinker.link(feature.properties['tplkm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tphklkm'] !== null ? autolinker.link(feature.properties['tphklkm'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_max'] !== null ? autolinker.link(feature.properties['tptolk_max'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_a'] !== null ? autolinker.link(feature.properties['tptolk_a'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_e'] !== null ? autolinker.link(feature.properties['tptolk_e'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_s'] !== null ? autolinker.link(feature.properties['tptolk_s'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_q'] !== null ? autolinker.link(feature.properties['tptolk_q'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_f'] !== null ? autolinker.link(feature.properties['tptolk_f'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_r'] !== null ? autolinker.link(feature.properties['tptolk_r'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_j'] !== null ? autolinker.link(feature.properties['tptolk_j'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_p'] !== null ? autolinker.link(feature.properties['tptolk_p'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_o'] !== null ? autolinker.link(feature.properties['tptolk_o'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_i'] !== null ? autolinker.link(feature.properties['tptolk_i'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_b'] !== null ? autolinker.link(feature.properties['tptolk_b'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_g'] !== null ? autolinker.link(feature.properties['tptolk_g'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_x'] !== null ? autolinker.link(feature.properties['tptolk_x'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_k'] !== null ? autolinker.link(feature.properties['tptolk_k'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_u'] !== null ? autolinker.link(feature.properties['tptolk_u'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_d'] !== null ? autolinker.link(feature.properties['tptolk_d'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_c'] !== null ? autolinker.link(feature.properties['tptolk_c'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_l'] !== null ? autolinker.link(feature.properties['tptolk_l'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_h'] !== null ? autolinker.link(feature.properties['tptolk_h'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_n'] !== null ? autolinker.link(feature.properties['tptolk_n'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_t'] !== null ? autolinker.link(feature.properties['tptolk_t'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['tptolk_m'] !== null ? autolinker.link(feature.properties['tptolk_m'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Tyopaikkaruudukko_2018_6_0() {
+            return {
+                pane: 'pane_Tyopaikkaruudukko_2018_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(213,180,60,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Tyopaikkaruudukko_2018_6');
+        map.getPane('pane_Tyopaikkaruudukko_2018_6').style.zIndex = 406;
+        map.getPane('pane_Tyopaikkaruudukko_2018_6').style['mix-blend-mode'] = 'normal';
+        var layer_Tyopaikkaruudukko_2018_6 = L.geoJson(null, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Tyopaikkaruudukko_2018_6',
+            layerName: 'layer_Tyopaikkaruudukko_2018_6',
+            style: style_Tyopaikkaruudukko_2018_6_0,
+            pane: 'pane_Tyopaikkaruudukko_2018_6',
+            onEachFeature: pop_Tyopaikkaruudukko_2018_6
+        });
+        function getTyopaikkaruudukko_2018_6Json(geojson) {
+            layer_Tyopaikkaruudukko_2018_6.addData(geojson);
+        };
+        bounds_group.addLayer(layer_Tyopaikkaruudukko_2018_6);
+        map.addLayer(layer_Tyopaikkaruudukko_2018_6);
+
+        </script>
+        <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Seutukartta_liikenne_juna_asema&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetSeutukartta_liikenne_juna_asema_1Json'></script>
+        <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Seutukartta_liikenne_lentoasemat&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetSeutukartta_liikenne_lentoasemat_2Json'></script>
+        <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Seutukartta_liikenne_metroasemat&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetSeutukartta_liikenne_metroasemat_3Json'></script>
+        <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Seutukartta_liikenne_paatiet&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetSeutukartta_liikenne_paatiet_4Json'></script>
+        <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Pysakointipaikat_alue&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetPysakointipaikat_alue_5Json'></script>
+        <script src='https://kartta.hsy.fi/geoserver/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=asuminen_ja_maankaytto:Tyopaikkaruudukko_2018&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetTyopaikkaruudukko_2018_6Json'></script>
+    </body>
+</html>
