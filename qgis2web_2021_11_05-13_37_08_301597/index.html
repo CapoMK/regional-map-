@@ -39,6 +39,16 @@
     <br>
 </br>
 
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -89,8 +99,6 @@
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
-
-        
 
         // Suurpiirit //
 
