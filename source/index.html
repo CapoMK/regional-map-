@@ -45,7 +45,6 @@
 
     <h2>This map will pick the perfect area inside Helsinki for you to live.</h2>
     <br>
-</br>
 
 <h3>First we need to know a couple of things about you.</h3>
 
@@ -57,47 +56,55 @@
 
 <form id="form1">
     <p>Do you prefer an area with good public transport or good parking?</p>
-    <input type="radio" id="html" name="live" value="HTML">
+    <input type="radio" id="pt" name="live" value="HTML">
     <label for="trans">Public transport</label><br>
-    <input type="radio" id="css" name="live" value="CSS">
+    <input type="radio" id="gp" name="live" value="CSS">
     <label for="css">Good parking</label><br>
-    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <input type="radio" id="dm" name="live" value="JavaScript">
     <label for="javascript">Doesn't matter</label>
 
   </form>
+
+  <br>
 
   <form id="form2">
     <p>Is the cost level of housing important to you?</p>
-    <input type="radio" id="html" name="live" value="HTML">
+    <input type="radio" id="no" name="live" value="HTML">
     <label for="trans">No, the cost level does not matter at all</label><br>
-    <input type="radio" id="css" name="live" value="CSS">
+    <input type="radio" id="yes" name="live" value="CSS">
     <label for="css">Yes, the area should be inexpensive</label><br>
-    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <input type="radio" id="dm2" name="live" value="JavaScript">
     <label for="javascript">Doesn't matter</label>
 
   </form>
+
+  <br>
 
   <form id="form3">
     <p>Would you like your area to be full of everyday services and activities?</p>
-    <input type="radio" id="html" name="live" value="HTML">
+    <input type="radio" id="yes2" name="live" value="HTML">
     <label for="trans">Yes</label><br>
-    <input type="radio" id="css" name="live" value="CSS">
+    <input type="radio" id="no2" name="live" value="CSS">
     <label for="css">No</label><br>
-    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <input type="radio" id="dm3" name="live" value="JavaScript">
     <label for="javascript">Doesn't matter</label>
 
   </form>
+
+  <br>
 
   <form id="form4">
     <p>Does the level of noise affect your housing area decision?</p>
-    <input type="radio" id="html" name="live" value="HTML">
+    <input type="radio" id="yes3" name="live" value="HTML">
     <label for="trans">Yes</label><br>
-    <input type="radio" id="css" name="live" value="CSS">
+    <input type="radio" id="no3" name="live" value="CSS">
     <label for="css">No</label><br>
-    <input type="radio" id="javascript" name="live" value="JavaScript">
+    <input type="radio" id="dm4" name="live" value="JavaScript">
     <label for="javascript">Doesn't matter</label>
 
   </form>
+
+  <br>
 
 
 
@@ -114,6 +121,9 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
+
+
+        
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
