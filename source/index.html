@@ -53,79 +53,12 @@
 
 
 
-
-<form id="form1">
-    <p>Do you prefer an area with good public transport or good parking?</p>
-     <input type="radio" name="option1" value="op1" id="pt">Public transport<br>
-    <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
-    <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
-
-  </form>
-
-  <br>
-
-  <form id="form2">
-    <p>Is the cost level of housing important to you?</p>
-     <input type="radio" name="option2" value="op4" id="yes">Yes<br>
-    <input type="radio" name="option2" value="op5" id="no">No<br>
-    <input type="radio" name="option2" value="op6" id="dm">Doesn't matter<br>
-
-  </form>
-
-  <br>
-
-  <form id="form3">
-    <p>Would you like your area to be full of everyday services and activities?</p>
-      <input type="radio" name="option3" value="op7" id="yes2">Yes<br>
-    <input type="radio" name="option3"  value="op8" id="no2">No<br>
-    <input type="radio" name="option3" value="op9" id="dm2">Doesn't matter<br>
-
-  </form>
-
-  <br>
-
-  <form id="form4">
-    <p>Does the level of noise affect your housing area decision?</p>
-     <input type="radio" name="option4" value="op10" id="yes3">Yes<br>
-    <input type="radio" name="option4" value="op11" id="no3">No<br>
-    <input type="radio" name="option4" value="op12" id="dm3">Doesn't matter<br>
-
-  </form>
-
-  <button onclick="Pohina()">Submit</button>
-
-  <p id="demo"></p>
-  
-  <script>
-  
-  
-  /* The function should be able to do the following things: 
-  
-    1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
-    
-    2. Zoom the map to focus on the marker. (nice to have feature)
-    
-    3. Show the reasons on text that make the specific area suitable in the first place. (popup)
-    
-    4. The function must also specify the areas in plural that are suitable for the respondent. 
-    
-    */
-
-
-
-  function Pohina() {
-
-    document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
-
-        suurpiiri1.setOpacity(1.0);
-
-        suurpiiri1.bindPopup("<b>You like good public transport, good service availability.</b><br>").openPopup();
-
-        layer_GoogleHybrid_0.setOpacity(0.9);
-  
-    
-  };
-
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Perfect Area";
+  suurpiiri1.setOpacity(1.0);
+  suurpiiri1.bindPopup("<b>South Helsinki</b><br>Southern Major District").openPopup();
+}
 </script>
 
 
