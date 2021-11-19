@@ -58,32 +58,33 @@
     <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
 
   </form>
-
+  <br>
   <form id="form2">
     <p>Is the cost level of housing important to you?</p>
     &nbsp;<input type="radio" name="option2" value="op4" id="yes">Yes<br>
     <input type="radio" name="option2" value="op5" id="no">No<br>
-    <input type="radio" name="option2" value="op6" id="dm">Doesn't matter<br>
+    <input type="radio" name="option2" value="op6" id="dm2">Doesn't matter<br>
 
   </form>
-
+  <br>
   <form id="form3">
     <p>Would you like your area to be full of everyday services and activities?</p>
     &nbsp; <input type="radio" name="option3" value="op7" id="yes2">Yes<br>
     <input type="radio" name="option3" value="op8" id="no2">No<br>
-    <input type="radio" name="option3" value="op9" id="dm2">Doesn't matter<br>
+    <input type="radio" name="option3" value="op9" id="dm3">Doesn't matter<br>
 
   </form>
 
-
+  <br>
   <form id="form4">
     <p>Does the level of noise affect your housing area decision?</p>
     &nbsp;<input type="radio" name="option4" value="op10" id="yes3">Yes<br>
     <input type="radio" name="option4" value="op11" id="no3">No<br>
-    <input type="radio" name="option4" value="op12" id="dm3">Doesn't matter<br>
+    <input type="radio" name="option4" value="op12" id="dm4">Doesn't matter<br>
 
   </form>
 
+<br>
   <button onclick="Pohina()">Submit</button>
 
 
@@ -109,13 +110,21 @@
 
     function Pohina() {
 
-document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+    var rd1 = document.getElementbyId("pt");
+    var rd2 = document.getElementbyId("gp");
+    var rd3 = document.getElementbyId("dm");
+    var rd4 = document.getElementbyId("yes");
+    var rd5 = document.getElementbyId("no");
+    var rd6 = document.getElementbyId("dm2");
+    var rd7 = document.getElementbyId("yes2");
+    var rd8 = document.getElementbyId("no2");
+    var rd9 = document.getElementbyId("dm3");
+    var rd10 = document.getElementbyId("yes3");
+    var rd11 = document.getElementbyId("no3");
+    var rd12 = document.getElementbyId("dm4");
+        
 
-    suurpiiri1.setOpacity(1.0);
 
-    suurpiiri1.bindPopup("<b>You like good public transport, good service availability.</b><br>").openPopup();
-
-    layer_GoogleHybrid_0.setOpacity(0.9);
 
 
 };
