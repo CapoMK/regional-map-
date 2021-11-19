@@ -126,6 +126,12 @@ alert("no channel selected");
 
 <br>
 </br>
+
+
+<div id="forms">
+
+
+    <form id ="form1">
     <p>Do you prefer an area with good public transport or good parking?</p>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
@@ -134,40 +140,49 @@ alert("no channel selected");
 
   <br>
 
+</form>
+    <form id="form2">
     <p>Is the cost level of housing important to you?</p>
-    <input type="radio" name="option2" value="op4" id="yes">Yes<br>
-    <input type="radio" name="option2" value="op5" id="no">No<br>
-    <input type="radio" name="option2" value="op6" id="dm2">Doesn't matter<br>
+    <input id="yes" name="option2" type ="radio" value="op4">Yes</input><br>
+    <input id="no" name="option2" type ="radio" value="op5">No</input><br>
+    <input id="dm2" name="option2" type ="radio" value="op6">Doesn't matter</input><br>
 
   
   <br>
-  
+
+</form>
+
+    <form id="form3">
     <p>Would you like your area to be full of everyday services and activities?</p>
-    <input type="radio" name="option3" value="op7" id="yes2">Yes<br>
-    <input type="radio" name="option3" value="op8" id="no2">No<br>
-    <input type="radio" name="option3" value="op9" id="dm3">Doesn't matter<br>
+    <input id="yes2" name="option3" type ="radio" value="op7">Yes</input><br>
+    <input id="no2" name="option3" type ="radio" value="op8">No</input><br>
+    <input id="dm3" name="option3" type ="radio" value="op9">Doesn't matter</input><br>
 
  
 
   <br>
-  
+
+</form>
+
+    <form id="form4">
     <p>Does the level of noise affect your housing area decision?</p>
-    <input type="radio" name="option4" value="op10" id="yes3">Yes<br>
-    <input type="radio" name="option4" value="op11" id="no3">No<br>
-    <input type="radio" name="option4" value="op12" id="dm4">Doesn't matter<br>
+    <input id="yes3" name="option4" type ="radio" value="op10">Yes</input><br>
+    <input id="no3" name="option4" type ="radio" value="op11">No</input><br>
+    <input id="dm4" name="option4" type ="radio" value="op12">Doesn't matter</input><br>
 
   
 
 <br>
 
-
-<button onclick="Pohina()" id="btn">Submit</button>
+</form>
 
 
 
  <p id="demo"></p>
 
 
+  
+<button onclick="Pohina()">Submit</button>
 
 <script>
 
@@ -182,6 +197,9 @@ alert("no channel selected");
     4. The function must also specify the areas in plural that are suitable for the respondent. 
     
     */
+
+
+
 
 
 
