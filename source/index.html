@@ -30,20 +30,7 @@
 <script type="text/javascript">
 
 
-const btn = document.querySelector('#btn');
 
-btn.onclick = function (){
-
-    const rbs = document.querySelectorAll('input[name="option1"]');
-            let selectedValue;
-            for (const rb of rbs) {
-                if (rb.checked) {
-                    selectedValue = rb.value;
-                    break;
-                }
-            }
-            alert(selectedValue);
-        };
 
 function Pohina() {
 
@@ -139,15 +126,14 @@ alert("no channel selected");
 
 <br>
 </br>
-
     <p>Do you prefer an area with good public transport or good parking?</p>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
     <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
 
-  
+
   <br>
-  
+
     <p>Is the cost level of housing important to you?</p>
     <input type="radio" name="option2" value="op4" id="yes">Yes<br>
     <input type="radio" name="option2" value="op5" id="no">No<br>
@@ -175,12 +161,13 @@ alert("no channel selected");
 <br>
 
 
-  <button id="btn">Submit</button>
-
+<button onclick="Pohina()" id="btn">Submit</button>
 
 
 
  <p id="demo"></p>
+
+
 
 <script>
 
