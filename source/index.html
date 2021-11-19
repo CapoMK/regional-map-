@@ -151,7 +151,7 @@
     var rd12 = document.getElementById("dm4");
 
 
-    //form 1 //
+    // form //
     var fo1 = document.getElementById("form");
 
 
@@ -162,14 +162,23 @@
 
     document.getElementById("output").innerHTML = "<br>This is the perfect area for you.</br>";
 
+
+
+    // defines the opacity of the selected markers //
     suurpiiri1.setOpacity(1.0);
+    suurpiiri2.setOpacity(0.0);
+    suurpiiri3.setOpacity(0.0);
+    suurpiiri4.setOpacity(0.0);
+    suurpiiri5.setOpacity(0.0);
+    suurpiiri6.setOpacity(0.0);
+    suurpiiri7.setOpacity(0.0);
+    suurpiiri8.setOpacity(0.0);
 
-    suurpiiri1.bindPopup("<b>You like good public transport and good service availability.</b><br>").openPopup();
-
-    layer_GoogleHybrid_0.setOpacity(0.9);
+    suurpiiri1.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South").openPopup();
 
 
-    for(var i=0;i<fo1.length;i++)
+
+    for(var i=0; i<fo1.length; i++)
 
 
     fo1[i].checked = false;
@@ -178,26 +187,41 @@
 
     else if(rd2.checked == true) {
 
-    document.getElementById("output").innerHTML = "<br>This is the perfect area for you.</br>";
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(0.0);
+    suurpiiri2.setOpacity(0.0);
+    suurpiiri3.setOpacity(0.0);
     suurpiiri4.setOpacity(1.0);
+    suurpiiri5.setOpacity(1.0);
+    suurpiiri6.setOpacity(0.0);
+    suurpiiri7.setOpacity(0.0);
+    suurpiiri8.setOpacity(1.0);
 
-    suurpiiri4.bindPopup("<b>You prefer good parking.</b><br>").openPopup();
+    suurpiiri4.bindPopup("<b>You prefer good parking.</b><br>Helsinki North").openPopup();
+    suurpiiri5.bindPopup("<b>You prefer good parking.</b><br>Helsinki Northeast").openPopup();
+    suurpiiri8.bindPopup("<b>You prefer good parking.</b><br>Östersundom").openPopup();
 
-    layer_GoogleHybrid_0.setOpacity(0.9);
 
 
-    for(var i=0;i<fo1.length;i++)
+    for(var i=0 ;i<fo1.length; i++)
 
 
     fo1[i].checked = false;
 
 }   
 
+    
+
     else if(rd3.checked == true){
+
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
+
+    // defines the opacity of the selected markers //
     suurpiiri1.setOpacity(1.0);
     suurpiiri2.setOpacity(1.0);
     suurpiiri3.setOpacity(1.0);
@@ -209,9 +233,9 @@
 
     suurpiiri1.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
-    layer_GoogleHybrid_0.setOpacity(0.9);
 
-    for(var i=0;i<fo1.length;i++)
+
+    for(var i=0 ;i<fo1.length; i++)
 
     fo1[i].checked = false;
 
@@ -220,21 +244,68 @@
 
     else if(rd4.checked == true){
 
-    for(var i=0;i<fo1.length;i++)
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(0.0);
+    suurpiiri2.setOpacity(0.0);
+    suurpiiri3.setOpacity(0.0);
+    suurpiiri4.setOpacity(0.0);
+    suurpiiri5.setOpacity(1.0);
+    suurpiiri6.setOpacity(0.0);
+    suurpiiri7.setOpacity(1.0);
+    suurpiiri8.setOpacity(0.0);
+
+    suurpiiri5.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki East").openPopup();
+    suurpiiri7.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
-}   else if(rd5.checked == true){
-
-    for(var i=0;i<fo1.length;i++)
-
-    fo1[i].checked = false;
+}   
 
 
-}   else if(rd6.checked == true){
+    else if(rd5.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(1.0);
+    suurpiiri2.setOpacity(1.0);
+    suurpiiri3.setOpacity(1.0);
+    suurpiiri4.setOpacity(0.0);
+    suurpiiri5.setOpacity(0.0);
+    suurpiiri6.setOpacity(1.0);
+    suurpiiri7.setOpacity(0.0);
+    suurpiiri8.setOpacity(0.0);
+
+
+    suurpiiri1.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki South").openPopup();
+    suurpiiri2.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Central").openPopup();
+    suurpiiri6.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Southeast").openPopup();
+    suurpiiri3.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki West").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
+
+    fo1[i].checked = false;
+
+
+}   
+
+
+    else if(rd6.checked == true){
+
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
     suurpiiri1.setOpacity(1.0);
     suurpiiri2.setOpacity(1.0);
     suurpiiri3.setOpacity(1.0);
@@ -246,11 +317,8 @@
 
     suurpiiri1.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
-    layer_GoogleHybrid_0.setOpacity(0.9);
 
-
-
-    for(var i=0;i<fo1.length;i++)
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
     
@@ -258,24 +326,69 @@
 
     else if(rd7.checked == true){
 
-    for(var i=0;i<fo1.length;i++)
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(1.0);
+    suurpiiri2.setOpacity(1.0);
+    suurpiiri3.setOpacity(0.0);
+    suurpiiri4.setOpacity(0.0);
+    suurpiiri5.setOpacity(0.0);
+    suurpiiri6.setOpacity(0.0);
+    suurpiiri7.setOpacity(1.0);
+    suurpiiri8.setOpacity(0.0);
+
+    suurpiiri1.bindPopup("<b>Most services are found at this area.</b><br></br>Helsinki South").openPopup();
+    suurpiiri2.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki Central").openPopup();
+    suurpiiri7.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki East").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
 }   
 
+    
+    
     else if(rd8.checked == true){
 
-    for(var i=0;i<fo1.length;i++)
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(0.0);
+    suurpiiri2.setOpacity(0.0);
+    suurpiiri3.setOpacity(0.0);
+    suurpiiri4.setOpacity(1.0);
+    suurpiiri5.setOpacity(1.0);
+    suurpiiri6.setOpacity(1.0);
+    suurpiiri7.setOpacity(0.0);
+    suurpiiri8.setOpacity(1.0);
+
+    suurpiiri4.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki North ").openPopup();
+    suurpiiri5.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki Central").openPopup();
+    suurpiiri6.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki Northeast").openPopup();
+    suurpiiri8.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Östersundom").openPopup();
+
+    
+
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
 }   
+
+    
 
     else if(rd9.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
+
+    // defines the opacity of the selected markers //
     suurpiiri1.setOpacity(1.0);
     suurpiiri2.setOpacity(1.0);
     suurpiiri3.setOpacity(1.0);
@@ -287,23 +400,46 @@
 
     suurpiiri1.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
-    layer_GoogleHybrid_0.setOpacity(0.9);
-
-    for(var i=0;i<fo1.length;i++)
-
-    fo1[i].checked = false;
-
-}   else if(rd10.checked == true){
-
-    for(var i=0;i<fo1.length;i++)
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
 }   
 
+
+
+
+    else if(rd10.checked == true){
+
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    suurpiiri1.setOpacity(0.0);
+    suurpiiri2.setOpacity(0.0);
+    suurpiiri3.setOpacity(1.0);
+    suurpiiri4.setOpacity(1.0);
+    suurpiiri5.setOpacity(1.0);
+    suurpiiri6.setOpacity(0.0);
+    suurpiiri7.setOpacity(0.0);
+    suurpiiri8.setOpacity(1.0);
+
+    suurpiiri3.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki West").openPopup();
+    suurpiiri4.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki North").openPopup();
+    suurpiiri5.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Northeast").openPopup();
+    suurpiiri6.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Southeast").openPopup();
+    suurpiiri8.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Östersundom").openPopup();
+
+    for(var i=0; i<fo1.length; i++)
+
+    fo1[i].checked = false;
+
+}   
+
+
     else if(rd11.checked == true){
 
-    for(var i=0;i<fo1.length;i++)
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
@@ -311,6 +447,8 @@
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
+
+    // defines the opacity of the selected markers //
     suurpiiri1.setOpacity(1.0);
     suurpiiri2.setOpacity(1.0);
     suurpiiri3.setOpacity(1.0);
@@ -326,17 +464,32 @@
 
 
 
-    for(var i=0;i<fo1.length;i++)
+    for(var i=0; i<fo1.length; i++)
 
     fo1[i].checked = false;
 
 } 
 
-    else 
+
+
+
+
+    else {
 
         alert("You have to select at least one option!");
 
+        suurpiiri1.setOpacity(0.0);
+        suurpiiri2.setOpacity(0.0);
+        suurpiiri3.setOpacity(0.0);
+        suurpiiri4.setOpacity(0.0);
+        suurpiiri5.setOpacity(0.0);
+        suurpiiri6.setOpacity(0.0);
+        suurpiiri7.setOpacity(0.0);
+        suurpiiri8.setOpacity(0.0);
 
+
+
+    }
 };
 
 
