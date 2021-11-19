@@ -27,83 +27,6 @@
 
         <title>Where to live</title>
 
-<script type="text/javascript">
-
-
-
-
-function Pohina() {
-
-var rd1 = document.getElementById("pt");
-var rd2 = document.getElementById("gp");
-var rd3 = document.getElementById("dm");
-var rd4 = document.getElementById("yes");
-var rd5 = document.getElementById("no");
-var rd6 = document.getElementById("dm2");
-var rd7 = document.getElementById("yes2");
-var rd8 = document.getElementById("no2");
-var rd9 = document.getElementById("dm3");
-var rd10 = document.getElementById("yes3");
-var rd11 = document.getElementById("no3");
-var rd12 = document.getElementById("dm4");
-
-if(rd1.checked == true)
-
-alert("The channel selected is: " +rd1.value);
-
-else if(rd2.checked == true)
-
-alert("The channel selected is: " +rd2.value);
-
-else if(rd3.checked == true)
-
-alert("The channel selected is: " +rd3.value);
-
-else if(rd4.checked == true)
-
-alert("The channel selected is: " +rd4.value);
-
-else if(rd5.checked == true)
-
-alert("The channel selected is: " +rd5.value);
-
-else if(rd6.checked == true)
-
-alert("The channel selected is: " +rd6.value);
-
-else if(rd7.checked == true)
-
-alert("The channel selected is: " +rd7.value);
-
-else if(rd8.checked == true)
-
-alert("The channel selected is: " +rd8.value);
-
-else if(rd9.checked == true)
-
-alert("The channel selected is: " +rd9.value);
-
-else if(rd10.checked == true)
-
-alert("The channel selected is: " +rd10.value);
-
-else if(rd11.checked == true)
-
-alert("The channel selected is: " +rd11.value);
-
-else if(rd12.checked == true)
-
-alert("The channel selected is: " +rd12.value);
-
-else
-
-alert("no channel selected");
-
-};
-
-</script>
-
-
     </head>
 
 
@@ -245,7 +168,7 @@ alert("no channel selected");
 
     suurpiiri1.setOpacity(1.0);
 
-    suurpiiri1.bindPopup("<b>You like good public transport, good service availability.</b><br>").openPopup();
+    suurpiiri1.bindPopup("<b>Good public transport and good service availability here!</b><br>").openPopup();
 
     layer_GoogleHybrid_0.setOpacity(0.9);
 
@@ -259,7 +182,13 @@ alert("no channel selected");
 
     else if(rd2.checked == true) {
 
-    alert("The channel selected is: " +rd2.value);
+    document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+
+    suurpiiri4.setOpacity(1.0);
+
+    suurpiiri4.bindPopup("<b>A lot of parking space here!</b><br>").openPopup();
+
+    layer_GoogleHybrid_0.setOpacity(0.9);
 
     for(var i=0;i<fo1.length;i++)
 
@@ -270,7 +199,30 @@ alert("no channel selected");
 
     else if(rd3.checked == true){
 
-    alert("The channel selected is: " +rd3.value);
+        document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+
+suurpiiri1.setOpacity(1.0);
+
+suurpiiri1.bindPopup("<b>Good public transport and good service availability here!</b><br>").openPopup();
+
+layer_GoogleHybrid_0.setOpacity(0.9);
+
+document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+
+suurpiiri2.setOpacity(1.0);
+
+suurpiiri2.bindPopup("<b>Good public transport and good service availability here!</b><br>").openPopup();
+
+layer_GoogleHybrid_0.setOpacity(0.9);
+
+document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+
+suurpiiri3.setOpacity(1.0);
+
+suurpiiri3.bindPopup("<b>Good public transport and good se
+    rvice availability here!</b><br>").openPopup();
+
+layer_GoogleHybrid_0.setOpacity(0.9);
 
     for(var i=0;i<fo1.length;i++)
 
@@ -289,7 +241,13 @@ alert("no channel selected");
 
 }   else if(rd5.checked == true){
 
-    alert("The channel selected is: " +rd5.value);
+    document.getElementById("demo").innerHTML = "<br>This is the perfect area for you.</br>";
+
+    suurpiiri1.setOpacity(1.0);
+
+    suurpiiri1.bindPopup("<b>Good public transport and good service availability here!</b><br>").openPopup();
+
+    layer_GoogleHybrid_0.setOpacity(0.9);
 
     for(var i=0;i<fo2.length;i++)
 
@@ -346,7 +304,9 @@ alert("no channel selected");
 
     else if(rd11.checked == true){
 
-    alert("The channel selected is: " +rd11.value);
+    suurpiiri8.bindPopup("<b>Östersundom</b><br>Östersundom Major District").openPopup();
+
+    suurpiiri8.setOpacity(1.0);
 
     for(var i=0;i<fo4.length;i++)
 
