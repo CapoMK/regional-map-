@@ -161,7 +161,7 @@
 
     // conditional that checks user input, 1 input selected //
 
-    if(rd1.checked == true){
+    if(rd1.checked == true && rd5.checked == true && rd7.checked == true && rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>This is the perfect area for you.</br>";
 
@@ -188,7 +188,7 @@
 
 }
 
-    else if(rd2.checked == true) {
+    else if(rd2.checked == true && rd4.checked == true || rd5.checked == true && rd8.checked == true && rd10.checked == true) {
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -246,7 +246,7 @@
 
 }   
 
-    else if(rd4.checked == true){
+    else if(rd4.checked == true && rd7.checked == true || rd8.checked == true && rd10.checked == true || rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -273,7 +273,7 @@
 }   
 
 
-    else if(rd5.checked == true){
+    else if(rd5.checked == true && rd7.checked == true || rd8.checked == true && rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -288,7 +288,7 @@
     helsinkie.setOpacity(0.0);
     oster.setOpacity(0.0);
 
-
+    // personalize these again //
     helsinkis.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki South").openPopup();
     helsinkice.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Central").openPopup();
     helsinkise.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Southeast").openPopup();
@@ -328,7 +328,7 @@
     
 }   
 
-    else if(rd7.checked == true){
+    else if(rd7.checked == true && rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -357,7 +357,7 @@
 
     
     
-    else if(rd8.checked == true){
+    else if(rd8.checked == true && rd10.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -501,7 +501,7 @@
 
     else {
 
-        alert("You have to select at least one option!");
+        alert("You have to select one option from each radio button");
 
         helsinkis.setOpacity(0.0);
         helsinkice.setOpacity(0.0);
