@@ -15,7 +15,7 @@ body {
 }
         
         #map {
-            width: 1000px;
+            width: 1700px;
             height: 1000px;
             max-width: 95%;
             max-height: 95%;
@@ -71,8 +71,8 @@ footer {
 </br>
 
     <form id ="form">
-    <p style="padding: 1%; border-radius: 25px; border-style: solid;
-    rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Do you prefer an area with good public transport or good parking?</b><br>
+    <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
+     margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Do you prefer an area with good public transport or good parking?</b><br>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
     <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
@@ -83,8 +83,8 @@ footer {
   <br>
 
 
-  <p style="padding: 1%; border-radius: 25px; border-style: solid;
-  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>What price range are you looking for?</b><br>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
+    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>What price range are you looking for?</b><br>
     <input id="yes" name="option2" type ="radio" value="op4">Higher</input><br>
     <input id="no" name="option2" type ="radio" value="op5">Lower</input><br>
     <input id="dm2" name="option2" type ="radio" value="op6">Doesn't matter</input><br>
@@ -92,8 +92,8 @@ footer {
 
 
   <br>
-  <p style="padding: 1%; border-radius: 25px; border-style: solid;
-  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Would you like your area to be full of everyday services and activities?</b><br>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
+    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Would you like your area to be full of everyday services and activities?</b><br>
     <input id="yes2" name="option3" type ="radio" value="op7">Yes</input><br>
     <input id="no2" name="option3" type ="radio" value="op8">No</input><br>
     <input id="dm3" name="option3" type ="radio" value="op9">Doesn't matter</input><br>
@@ -103,8 +103,8 @@ footer {
 
 
   <br>
-  <p style="padding: 1%; border-radius: 25px; border-style: solid;
-  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Does the level of noise affect your housing area decision?</b><br>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
+    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Does the level of noise affect your housing area decision?</b><br>
     <input id="yes3" name="option4" type ="radio" value="op10">Yes</input><br>
     <input id="no3" name="option4" type ="radio" value="op11">No</input><br>
     <input id="dm4" name="option4" type ="radio" value="op12">Doesn't matter</input><br>
@@ -218,7 +218,7 @@ footer {
 
     helsinkin.bindPopup("<b>You prefer good parking.</b><br>Helsinki North").openPopup();
     helsinkine.bindPopup("<b>You prefer good parking.</b><br>Helsinki Northeast").openPopup();
-    oster.bindPopup("<b>You prefer good parking.</b><br>Östersundom").openPopup();
+    oster.bindPopup("<b>You prefer good parking.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
 
@@ -445,7 +445,7 @@ footer {
     helsinkin.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki North").openPopup();
     helsinkine.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Northeast").openPopup();
     helsinkise.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Southeast").openPopup();
-    oster.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Östersundom").openPopup();
+    oster.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Östersundom:<br>Karhusaari, Puroniitty, Talosaari").openPopup();
 
     for(var i=0; i<fo1.length; i++)
 
