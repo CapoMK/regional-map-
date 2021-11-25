@@ -10,7 +10,9 @@
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
-
+body {
+    background-image: url("HelsinkiBG.jpg"); 
+}
         
         #map {
             width: 1000px;
@@ -27,6 +29,12 @@
             border-style: solid;
         }
 
+footer {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
         </style>
 
 
@@ -42,8 +50,9 @@
 
 
     <body>
-
-
+  
+      
+        
         <br>
     </br>
 
@@ -62,41 +71,44 @@
 </br>
 
     <form id ="form">
-    <p>Do you prefer an area with good public transport or good parking?</p>
+    <p style="padding: 1%; border-radius: 25px; border-style: solid;
+    rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Do you prefer an area with good public transport or good parking?</b><br>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
     <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
-
+</p>
 
 
 
   <br>
 
 
-    <p>Is the cost level of housing important to you?</p>
-    <input id="yes" name="option2" type ="radio" value="op4">Yes</input><br>
-    <input id="no" name="option2" type ="radio" value="op5">No</input><br>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid;
+  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>What price range are you looking for?</b><br>
+    <input id="yes" name="option2" type ="radio" value="op4">Higher</input><br>
+    <input id="no" name="option2" type ="radio" value="op5">Lower</input><br>
     <input id="dm2" name="option2" type ="radio" value="op6">Doesn't matter</input><br>
-
+</p>
 
 
   <br>
-
-    <p>Would you like your area to be full of everyday services and activities?</p>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid;
+  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Would you like your area to be full of everyday services and activities?</b><br>
     <input id="yes2" name="option3" type ="radio" value="op7">Yes</input><br>
     <input id="no2" name="option3" type ="radio" value="op8">No</input><br>
     <input id="dm3" name="option3" type ="radio" value="op9">Doesn't matter</input><br>
 
- 
+ </p>
 
 
 
   <br>
-
-    <p>Does the level of noise affect your housing area decision?</p>
+  <p style="padding: 1%; border-radius: 25px; border-style: solid;
+  rgb:(0, 0, 0); margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Does the level of noise affect your housing area decision?</b><br>
     <input id="yes3" name="option4" type ="radio" value="op10">Yes</input><br>
     <input id="no3" name="option4" type ="radio" value="op11">No</input><br>
     <input id="dm4" name="option4" type ="radio" value="op12">Doesn't matter</input><br>
+</p>
 
 </form>
 
@@ -830,5 +842,11 @@
         <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Seutukartta_liikenne_paatiet&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetSeutukartta_liikenne_paatiet_4Json'></script>
         <script src='https://kartta.hel.fi/ws/geoserver/avoindata/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=avoindata:Pysakointipaikat_alue&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetPysakointipaikat_alue_5Json'></script>
         <script src='https://kartta.hsy.fi/geoserver/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=asuminen_ja_maankaytto:Tyopaikkaruudukko_2018&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetTyopaikkaruudukko_2018_6Json'></script>
+
+        <footer>
+            <p>Background Image license: https://unsplash.com/license <br>
+           <p>Contact information: <a href="mailto:bgj367@myy.haaga-helia.fi">pöhinä@gmail.com</a></p>
+          </footer>
+
     </body>
 </html>
