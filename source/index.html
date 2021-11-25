@@ -172,7 +172,7 @@ footer {
 
 
 
-    // conditional that checks user input, 1 input selected //
+    // (rd1) conditional that checks user input, Helsinki South //
 
     if(rd1.checked == true && rd5.checked == true && rd7.checked == true && rd11.checked == true){
 
@@ -201,7 +201,69 @@ footer {
 
 }
 
-    else if(rd2.checked == true && rd4.checked == true || rd5.checked == true && rd8.checked == true && rd10.checked == true) {
+
+
+    // rd1 Helsinki South, Helsinki Southeast and Helsinki East //
+
+    else if(rd1.checked == true && rd4.checked == true && rd7.checked == true && rd11.checked == true){
+
+        document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(1.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(0.0);
+    helsinkise.setOpacity(0.0);
+    helsinkie.setOpacity(1.0);
+    oster.setOpacity(0.0);
+
+    helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South").openPopup();
+    helsinkie.bindPopup("<b>You also might like cheaper housing prices and good service availability.</b><br></br>Helsinki East").openPopup();
+    helsinkise.bindPopup("<b>You like good public transport and good housing.</b><br></br>Helsinki Southeast").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
+
+
+    fo1[i].checked = false;
+
+    // rd1 Helsinki Northeast and Helsinki East //
+
+}   else if(rd1.checked == true && rd4.checked == true && rd7.checked == true && rd10.checked == true){
+
+
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(1.0);
+    helsinkise.setOpacity(0.0);
+    helsinkie.setOpacity(1.0);
+    oster.setOpacity(0.0);
+
+
+    helsinkie.bindPopup("<b>You might like cheaper housing prices and good service availability.</b><br></br>Helsinki East").openPopup();
+    helsinkine.bindPopup("<b>You might like cheaper housing prices and okay service availability.</b><br></br>Helsinki Northeast").openPopup();
+
+
+
+for(var i=0; i<fo1.length; i++)
+
+
+fo1[i].checked = false;
+
+
+}
+
+    // rd2 Helsinki North, Helsinki Northeast and Helsinki Östersundom //
+
+    else if(rd2.checked == true && rd5.checked == true && rd8.checked == true && rd10.checked == true) {
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -216,9 +278,9 @@ footer {
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
-    helsinkin.bindPopup("<b>You prefer good parking.</b><br>Helsinki North").openPopup();
-    helsinkine.bindPopup("<b>You prefer good parking.</b><br>Helsinki Northeast").openPopup();
-    oster.bindPopup("<b>You prefer good parking.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
+    helsinkin.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki North").openPopup();
+    helsinkine.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki Northeast").openPopup();
+    oster.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
 
@@ -228,7 +290,69 @@ footer {
 
     fo1[i].checked = false;
 
-}   
+
+    // rd2 Helsinki Southeast and Östersundom //
+}   else if(rd2.checked == true && rd5.checked == true && rd8.checked == true && rd10.checked == true){
+
+
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(0.0);
+    helsinkise.setOpacity(1.0);
+    helsinkie.setOpacity(0.0);
+    oster.setOpacity(1.0);
+
+    helsinkise.bindPopup("<b>You prefer okay service availability, good parking and a quieter area.</b><br>Helsinki Southeast").openPopup();
+    oster.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
+
+
+
+    for(var i=0 ;i<fo1.length; i++)
+
+    
+
+    fo1[i].checked = false;
+
+
+
+
+
+    // rd2 Helsinki East //
+
+
+} else if(rd2.checked == true && rd4.checked == true && rd7.checked == true && rd11.checked == true){
+
+
+    document.getElementById("output").innerHTML = "<br>This is the perfect area for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(0.0);
+    helsinkise.setOpacity(0.0);
+    helsinkie.setOpacity(1.0);
+    oster.setOpacity(0.0);
+
+    helsinkie.bindPopup("<b>You prefer okay service availability, good parking and a cheaper area.</b><br>Helsinki East").openPopup();
+
+
+    for(var i=0 ;i<fo1.length; i++)
+
+    
+
+    fo1[i].checked = false;
+
+
+}
 
     
 
@@ -258,8 +382,8 @@ footer {
 
 
 }   
-
-    else if(rd4.checked == true && rd7.checked == true || rd8.checked == true && rd10.checked == true || rd11.checked == true){
+    // rd4 Helsinki Northeast, Helsinki East //
+    else if(rd4.checked == true && rd7.checked == true && rd10.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -285,8 +409,36 @@ footer {
 
 }   
 
+    // rd4 Helsinki Northeast //
+    else if (rd4.checked == true && rd8.checked == true && rd10.checked == true){
 
-    else if(rd5.checked == true && rd7.checked == true || rd8.checked == true && rd11.checked == true){
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(1.0);
+    helsinkise.setOpacity(0.0);
+    helsinkie.setOpacity(0.0);
+    oster.setOpacity(0.0);
+
+
+    helsinkine.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast").openPopup();
+
+
+    for(var i=0; i<fo1.length; i++)
+
+    fo1[i].checked = false;
+
+
+}
+
+    // rd5 Helsinki South, Helsinki Central, Helsinki Southeast, Helsinki West //
+
+    else if(rd5.checked == true && rd7.checked == true && rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -316,6 +468,37 @@ footer {
 
 }   
 
+    // rd5 Helsinki West, Helsinki Southeast and Helsinki Östersundom //
+
+    else if(rd5.checked == true && rd8.checked == true && rd10.checked == true){
+
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(1.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(0.0);
+    helsinkise.setOpacity(1.0);
+    helsinkie.setOpacity(0.0);
+    oster.setOpacity(1.0);
+
+ 
+    helsinkiwe.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki West").openPopup();
+    helsinkise.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki Southeast").openPopup();
+    oster.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Östersundom").openPopup();
+
+
+for(var i=0; i<fo1.length; i++)
+
+fo1[i].checked = false;    
+
+
+
+}
+
 
     else if(rd6.checked == true){
 
@@ -340,6 +523,8 @@ footer {
     fo1[i].checked = false;
     
 }   
+
+    // rd7 Helsinki South, Helsinki Central and Helsinki East //
 
     else if(rd7.checked == true && rd11.checked == true){
 
@@ -368,8 +553,38 @@ footer {
 
 }   
 
+    // rd7 Helsinki Northeast, Helsinki Southeast //
+
+    else if(rd7.checked == true && rd10.checked == true){
+
+        document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(0.0);
+    helsinkine.setOpacity(1.0);
+    helsinkise.setOpacity(1.0);
+    helsinkie.setOpacity(0.0);
+    oster.setOpacity(0.0);
+
+    helsinkine.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Northeast").openPopup();
+    helsinkise.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Southeast").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
+
+    fo1[i].checked = false;
+
+
+    }
+
     
-    
+    // rd8 Helsinki North, Helsinki West, Helsinki Northeast and Helsinki Östersundom //
+
     else if(rd8.checked == true && rd10.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
@@ -385,9 +600,12 @@ footer {
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
-    helsinkin.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki North ").openPopup();
+
+    // personalize these //
+    
+    helsinkin.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki North").openPopup();
     helsinkiwe.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki West").openPopup();
-    helsinkine.bindPopup("<b>This area doesn't have a lot of services..</b><br></br>Helsinki Northeast").openPopup();
+    helsinkine.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki Northeast").openPopup();
     oster.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Östersundom").openPopup();
 
     
@@ -397,6 +615,39 @@ footer {
     fo1[i].checked = false;
 
 }   
+
+    // rd8 Helsinki Southeast, Helsinki Northeast and Helsinki North //
+
+    else if(rd8.checked == true && rd11.checked == true){
+
+        document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+
+
+    // defines the opacity of the selected markers //
+    helsinkis.setOpacity(0.0);
+    helsinkice.setOpacity(0.0);
+    helsinkiwe.setOpacity(0.0);
+    helsinkin.setOpacity(1.0);
+    helsinkine.setOpacity(1.0);
+    helsinkise.setOpacity(1.0);
+    helsinkie.setOpacity(0.0);
+    oster.setOpacity(1.0);
+
+
+    // personalize these //
+
+    helsinkin.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki North").openPopup();
+    helsinkise.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki Southeast").openPopup();
+    oster.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki North").openPopup();
+
+
+
+    for(var i=0; i<fo1.length; i++)
+
+    fo1[i].checked = false;
+
+}   
+
 
     
 
@@ -425,8 +676,9 @@ footer {
 
 
 
+    // rd10 Helsinki West, Helsinki North, Helsinki Northeast, Helsinki Southeast and Helsinki Östersundom //
 
-    else if(rd10.checked == true){
+    else if(rd10.checked == true && rd2.checked == true && rd5.checked == true && rd8.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -451,10 +703,11 @@ footer {
 
     fo1[i].checked = false;
 
-}   
+}
 
-
-    else if(rd11.checked == true){
+    // rd11 Helsinki South, Helsinki Central, Helsinki East //
+    
+    else if(rd11.checked == true && rd1.checked == true && rd5.checked == true && rd7.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
@@ -512,9 +765,11 @@ footer {
 
 
 
+
+
     else {
 
-        alert("You have to select one option from each radio button");
+        alert("You have to select at least one option from some of the radio buttons!");
 
         helsinkis.setOpacity(0.0);
         helsinkice.setOpacity(0.0);
