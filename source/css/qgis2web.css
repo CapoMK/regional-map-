@@ -50,20 +50,57 @@
 
         }
 
-
-        button {
-            
-            position: flex;
-            text-align: center;
+        .button-5 {
             margin-left: auto;
             margin-right: auto;
-            font-family: Century Gothic;
-              
-              
-        }
-
-
-
+            text-align: center;
+            align-items: center;
+            background-clip: padding-box;
+            background-color: #ffffff;
+            border: 2px solid transparent; 
+            border-color:#000000;
+            border-radius: .25rem;
+            box-shadow: rgba(255, 255, 255, 0.02) 0 1px 3px 0;
+            box-sizing: border-box;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            display: flex;
+            object-position: center;
+            font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 1.25;
+            min-height: 3rem;
+            padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+            position: relative;
+            text-decoration: none;
+            transition: all 250ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            width: auto;
+            align-items: center;
+          }
+          
+          .button-5:hover,
+          .button-5:focus {
+            background-color: #dbd5d0;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+          }
+          
+          .button-5:hover {
+            transform: translateY(-1px);
+          }
+          
+          .button-5:active {
+            background-color: #e0945a;
+            box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+            transform: translateY(0);
+          }
+            
+            
 
 
         #form {
