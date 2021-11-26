@@ -80,7 +80,6 @@ footer {
     <p> <b>Do you prefer an area with good public transport or good parking?</b><br>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
-    <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
 </p>
 </div>
 
@@ -91,7 +90,6 @@ footer {
   <p><b>What price range are you looking for?</b><br>
     <input id="yes" name="option2" type ="radio" value="op4">Lower</input><br>
     <input id="no" name="option2" type ="radio" value="op5">Higher</input><br>
-    <input id="dm2" name="option2" type ="radio" value="op6">Doesn't matter</input><br>
 </p>
 </div>
 
@@ -102,7 +100,6 @@ footer {
   <p><b>Would you like your area to be full of everyday services and activities?</b><br>
     <input id="yes2" name="option3" type ="radio" value="op7">Yes</input><br>
     <input id="no2" name="option3" type ="radio" value="op8">No</input><br>
-    <input id="dm3" name="option3" type ="radio" value="op9">Doesn't matter</input><br>
  </p>
 </div>
 
@@ -113,7 +110,6 @@ footer {
   <p><b>Does the level of noise affect your housing area decision?</b><br>
     <input id="yes3" name="option4" type ="radio" value="op10">Yes</input><br>
     <input id="no3" name="option4" type ="radio" value="op11">No</input><br>
-    <input id="dm4" name="option4" type ="radio" value="op12">Doesn't matter</input><br>
 </p>
 </div>
 
@@ -161,19 +157,15 @@ footer {
     // group 1 //
     var rd1 = document.getElementById("pt");
     var rd2 = document.getElementById("gp");
-    var rd3 = document.getElementById("dm");
     // group 2 //
     var rd4 = document.getElementById("yes");
     var rd5 = document.getElementById("no");
-    var rd6 = document.getElementById("dm2");
     // group 3 //
     var rd7 = document.getElementById("yes2");
     var rd8 = document.getElementById("no2");
-    var rd9 = document.getElementById("dm3");
     // group 4 // 
     var rd10 = document.getElementById("yes3");
     var rd11 = document.getElementById("no3");
-    var rd12 = document.getElementById("dm4");
 
 
     // form //
@@ -404,42 +396,6 @@ fo1[i].checked = false;
 
 }
 
-    
-
-    else if(rd3.checked == true){
-
-
-    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
-
-
-    // defines the opacity of the selected markers //
-    helsinkis.setOpacity(1.0);
-    helsinkice.setOpacity(1.0);
-    helsinkiwe.setOpacity(1.0);
-    helsinkin.setOpacity(1.0);
-    helsinkine.setOpacity(1.0);
-    helsinkise.setOpacity(1.0);
-    helsinkie.setOpacity(1.0);
-    oster.setOpacity(1.0);
-
-
-    // sets the map to be lower in opacity //
-    
-    layer_GoogleHybrid_0.setOpacity(0.7);
-
-
-    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
-
-
-
-    for(var i=0 ;i<fo1.length; i++)
-
-    fo1[i].checked = false;
-
-
-}   
-
-
     // rd4 Helsinki Northeast, Helsinki East //
     else if(rd4.checked == true && rd7.checked == true && rd10.checked == true){
 
@@ -576,36 +532,6 @@ fo1[i].checked = false;
 
 
 }
-
-
-    else if(rd6.checked == true){
-
-    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
-
-
-    // defines the opacity of the selected markers //
-    helsinkis.setOpacity(1.0);
-    helsinkice.setOpacity(1.0);
-    helsinkiwe.setOpacity(1.0);
-    helsinkin.setOpacity(1.0);
-    helsinkine.setOpacity(1.0);
-    helsinkise.setOpacity(1.0);
-    helsinkie.setOpacity(1.0);
-    oster.setOpacity(1.0);
-
-    // sets the map to be lower in opacity //
-    
-    layer_GoogleHybrid_0.setOpacity(0.7);
-
-
-    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
-
-
-    for(var i=0; i<fo1.length; i++)
-
-    fo1[i].checked = false;
-    
-}   
 
     // rd7 Helsinki South, Helsinki Central and Helsinki East //
 
@@ -749,39 +675,6 @@ fo1[i].checked = false;
 }   
 
 
-    
-
-    else if(rd9.checked == true){
-
-    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
-
-
-    // defines the opacity of the selected markers //
-    helsinkis.setOpacity(1.0);
-    helsinkice.setOpacity(1.0);
-    helsinkiwe.setOpacity(1.0);
-    helsinkin.setOpacity(1.0);
-    helsinkine.setOpacity(1.0);
-    helsinkise.setOpacity(1.0);
-    helsinkie.setOpacity(1.0);
-    oster.setOpacity(1.0);
-
-    // sets the map to be lower in opacity //
-    
-    layer_GoogleHybrid_0.setOpacity(0.7);
-
-
-    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
-
-
-    for(var i=0; i<fo1.length; i++)
-
-    fo1[i].checked = false;
-
-}   
-
-
-
     // rd10 Helsinki West, Helsinki North, Helsinki Northeast, Helsinki Southeast and Helsinki Östersundom //
 
     else if(rd10.checked == true && rd2.checked == true && rd5.checked == true && rd8.checked == true){
@@ -849,47 +742,9 @@ fo1[i].checked = false;
 
 
 
-
-    else if(rd12.checked == true){
-
-    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
-
-
-    // defines the opacity of the selected markers //
-    helsinkis.setOpacity(1.0);
-    helsinkice.setOpacity(1.0);
-    helsinkiwe.setOpacity(1.0);
-    helsinkin.setOpacity(1.0);
-    helsinkine.setOpacity(1.0);
-    helsinkise.setOpacity(1.0);
-    helsinkie.setOpacity(1.0);
-    oster.setOpacity(1.0);
-
-
-    // sets the map to be lower in opacity //
-    
-    layer_GoogleHybrid_0.setOpacity(0.7);
-
-
-    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
-
-
-
-    for(var i=0; i<fo1.length; i++)
-
-    fo1[i].checked = false;
-
-} 
-
-
-
-
-
-
-
     else {
         
-        // alerts the user that they need to take action //
+        // alerts the user that they need to take action by clicking some of the options //
 
         alert("You have to select at least one option from some of the radio buttons!");
 
@@ -982,6 +837,8 @@ fo1[i].checked = false;
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
+
+
 
 
 
