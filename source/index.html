@@ -10,6 +10,11 @@
         <link rel="stylesheet" href="css/leaflet.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
+
+a.ex1:hover, a.ex1:active {font-size: 110%;}
+a.ex2:hover, a.ex2:active {font-size: 110%;}
+a.ex3:hover, a.ex3:active {font-size: 110%;}    
+
 body {
     background-image: url("HelsinkiBG.jpg"); 
 }
@@ -50,8 +55,7 @@ footer {
 
 
     <body>
-  
-      
+
         
         <br>
     </br>
@@ -71,44 +75,47 @@ footer {
 </br>
 
     <form id ="form">
-    <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
-     margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Do you prefer an area with good public transport or good parking?</b><br>
+
+        <div class="transbox">
+    <p> <b>Do you prefer an area with good public transport or good parking?</b><br>
     <input type="radio" name="option1" value="op1" id="pt">Public transport</input><br>
     <input type="radio" name="option1" value="op2" id="gp">Good parking<br>
     <input type="radio" name="option1" value="op3" id="dm">Doesn't matter<br>
 </p>
-
+</div>
 
 
   <br>
 
-
-  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
-    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>What price range are you looking for?</b><br>
+  <div class="transbox">
+  <p><b>What price range are you looking for?</b><br>
     <input id="yes" name="option2" type ="radio" value="op4">Lower</input><br>
     <input id="no" name="option2" type ="radio" value="op5">Higher</input><br>
     <input id="dm2" name="option2" type ="radio" value="op6">Doesn't matter</input><br>
 </p>
+</div>
 
 
   <br>
-  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
-    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Would you like your area to be full of everyday services and activities?</b><br>
+
+  <div class="transbox">
+  <p><b>Would you like your area to be full of everyday services and activities?</b><br>
     <input id="yes2" name="option3" type ="radio" value="op7">Yes</input><br>
     <input id="no2" name="option3" type ="radio" value="op8">No</input><br>
     <input id="dm3" name="option3" type ="radio" value="op9">Doesn't matter</input><br>
-
  </p>
-
+</div>
 
 
   <br>
-  <p style="padding: 1%; border-radius: 25px; border-style: solid; color: #000000;
-    margin-left: 15%; margin-right: 15%; background-color: rgb(200, 205, 226);"><b>Does the level of noise affect your housing area decision?</b><br>
+
+  <div class="transbox">
+  <p><b>Does the level of noise affect your housing area decision?</b><br>
     <input id="yes3" name="option4" type ="radio" value="op10">Yes</input><br>
     <input id="no3" name="option4" type ="radio" value="op11">No</input><br>
     <input id="dm4" name="option4" type ="radio" value="op12">Doesn't matter</input><br>
 </p>
+</div>
 
 </form>
 
@@ -1123,8 +1130,9 @@ fo1[i].checked = false;
         <script src='https://kartta.hsy.fi/geoserver/wfs?SERVICE=WFS&VERSION=1.0.0&REQUEST=GetFeature&TYPENAME=asuminen_ja_maankaytto:Tyopaikkaruudukko_2018&SRSNAME=EPSG:4326&outputFormat=text%2Fjavascript&format_options=callback%3AgetTyopaikkaruudukko_2018_6Json'></script>
 
         <footer>
-            <p>Background Image license: https://unsplash.com/license <br>
-           <p>Contact information: <a href="mailto:bgj367@myy.haaga-helia.fi">pöhinä@gmail.com</a></p>
+            <p>Data from: <a class="ex1" href="https://hri.fi/en_gb/terms-and-conditions/"> Helsinki region info</a></p>
+           <p>Background image <a class="ex2" href= "https://unsplash.com/license"> license</a><br></p>
+           <p>Contact information: <a class="ex3" href="mailto:bgj367@myy.haaga-helia.fi">pöhinä@gmail.com</a></p>
           </footer>
 
     </body>

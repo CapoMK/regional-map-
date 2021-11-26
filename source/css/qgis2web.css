@@ -77,8 +77,20 @@
 
         }
 
-       
-       
+        div.transbox {
+            padding: 1%;
+            border-radius: 25px; 
+            border-style: solid; color: #000000;
+            margin-left: 15%;
+            margin-right: 15%;
+            background-color: rgb(200, 205, 226);
+            opacity: 1.0;
+            
+          }
+
+          div.transbox p {
+            opacity: 1.0;
+          }
 
 
 
