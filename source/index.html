@@ -128,9 +128,17 @@ footer {
  <p id="output"></p>
 
 
-  
-
 <br>
+
+<div class="slidecontainer">
+    <p>Default range slider:</p>
+    <input type="range" min="1" max="100" value="50">
+    
+    <p>Custom range slider:</p>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  </div>
+
+
 
 <script>
 
@@ -746,7 +754,7 @@ fo1[i].checked = false;
         
         // alerts the user that they need to take action by clicking some of the options //
 
-        alert("You have to select at least one option from some of the radio buttons!");
+        alert("You have to select at least one option from each column!");
 
         // resets the markers to their default state //
 
