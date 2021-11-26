@@ -131,6 +131,8 @@ footer {
 
 <script>
 
+
+
  /* The function should be able to do the following things: 
   
     1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
@@ -144,11 +146,11 @@ footer {
     */
 
 
-
+    // the meat of the function itself //
     function Pohina() {
 
-    // var declarations for input id elements //
 
+    // var declarations for input id elements //
     // group 1 //
     var rd1 = document.getElementById("pt");
     var rd2 = document.getElementById("gp");
@@ -166,23 +168,25 @@ footer {
     var rd11 = document.getElementById("no3");
     var rd12 = document.getElementById("dm4");
 
-
     // form //
     var fo1 = document.getElementById("form");
 
 
 
-    // (rd1) conditional that checks user input, Helsinki South //
+
+
+
+    // (rd1) conditional that checks user input, Helsinki South and Helsinki Central //
 
     if(rd1.checked == true && rd5.checked == true && rd7.checked == true && rd11.checked == true){
 
-    document.getElementById("output").innerHTML = "<br>This is the perfect area for you.</br>";
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
 
 
     // defines the opacity of the selected markers //
     helsinkis.setOpacity(1.0);
-    helsinkice.setOpacity(0.0);
+    helsinkice.setOpacity(1.0);
     helsinkiwe.setOpacity(0.0);
     helsinkin.setOpacity(0.0);
     helsinkine.setOpacity(0.0);
@@ -191,6 +195,7 @@ footer {
     oster.setOpacity(0.0);
 
     helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South").openPopup();
+    helsinkice.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki Central").openPopup();
 
 
 
@@ -207,7 +212,7 @@ footer {
 
     else if(rd1.checked == true && rd4.checked == true && rd7.checked == true && rd11.checked == true){
 
-        document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
+    document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
 
     // defines the opacity of the selected markers //
     helsinkis.setOpacity(1.0);
@@ -229,6 +234,8 @@ footer {
 
 
     fo1[i].checked = false;
+
+
 
     // rd1 Helsinki Northeast and Helsinki East //
 
@@ -382,6 +389,8 @@ fo1[i].checked = false;
 
 
 }   
+
+
     // rd4 Helsinki Northeast, Helsinki East //
     else if(rd4.checked == true && rd7.checked == true && rd10.checked == true){
 
@@ -768,8 +777,12 @@ fo1[i].checked = false;
 
 
     else {
+        
+        // alerts the user that they need to take action //
 
         alert("You have to select at least one option from some of the radio buttons!");
+
+        // resets the markers to their default state //
 
         helsinkis.setOpacity(0.0);
         helsinkice.setOpacity(0.0);
@@ -780,7 +793,18 @@ fo1[i].checked = false;
         helsinkie.setOpacity(0.0);
         oster.setOpacity(0.0);
 
+
+        // resets the p element to its default state by giving it an empty string //
+
         document.getElementById("output").innerHTML = "";
+
+
+
+        // resets the radio buttons to their default state //
+
+        for(var i=0; i<fo1.length; i++)
+
+        fo1[i].checked = false;
 
 
 
