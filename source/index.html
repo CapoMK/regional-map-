@@ -132,12 +132,11 @@ footer {
 
 <br>
 
+
 <div class="slidecontainer">
-    <p>Default range slider:</p>
-    <input type="range" min="1" max="100" value="50">
-    
     <p>Custom range slider:</p>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+    <p>Value: <span id="demo"></span></p>
   </div>
 
 
@@ -156,6 +155,55 @@ footer {
     4. The function must also specify the areas in plural that are suitable for the respondent. 
     
     */
+
+
+
+    // slider //
+    
+    var slider = document.getElementById("myRange2");
+    var output2 = document.getElementById("demo");
+    
+    output2.innerHTML = slider.value;
+
+
+
+    // function for slider //
+
+    slider.oninput = function() {
+
+    output2.innerHTML = layer_GoogleHybrid_0.setOpacity(1.0);
+
+
+    
+    // conditional //
+    
+    if(output2.value == "0"){
+
+    layer_GoogleHybrid_0.setOpacity(0.0);
+
+
+
+
+
+} else if(output2.value == "50"){
+
+    layer_GoogleHybrid_0.setOpacity(0.5);
+
+
+
+
+
+
+} else if(output2.value == "100"){
+
+
+    layer_GoogleHybrid_0.setOpacity(1.0);
+
+
+    } 
+
+
+};
 
 
     // the meat of the function itself //
@@ -180,8 +228,6 @@ footer {
 
     // form //
     var fo1 = document.getElementById("form");
-
-
 
 
     // if else section //
@@ -783,6 +829,8 @@ fo1[i].checked = false;
 
         fo1[i].checked = false;
 
+
+    
 
 
     }
