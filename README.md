@@ -183,3 +183,7 @@ I spent multiple hours learning about the techniques needed to continue adding t
 ## 25.11.2021
 
 We haven't updated this readme-file for ten days, oops. There has been quite a lot of advancement despite of this. We have multiple questions that you can answer to and it actually can give you recommendations based on your decisions! We also updated the look of our site, so it's not just a white background and a map. Pöhinäpojat are advancing, and the project's starting to look like something usable.
+
+## 26.11.2021
+
+Matias worked on the functionalities, while the rest of the team tried to make the page itself more responsive and user-friendly. The scope of the project isn't as big as it was in the beginning, but the basic idea is there.
