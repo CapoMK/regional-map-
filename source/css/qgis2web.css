@@ -116,8 +116,8 @@
             padding-right: 10px;
         }
         .leaflet-popup-content {
-            width:auto;
-            padding-right:10px;
+            width:50%;
+            height:100%;
         }
         .leaflet-tooltip {
             background: none;
@@ -220,3 +220,5 @@
         .leaflet-control-layers-toggle {
             background-color: #f8f8f8 !important;
         }
+
+        
