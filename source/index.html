@@ -142,11 +142,10 @@ footer {
 
 
 
+
  /* The function should be able to do the following things: 
   
     1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
-    
-    2. Zoom the map to focus on the marker. (nice to have feature)
     
     3. Show the reasons on text that make the specific area suitable in the first place. (popup)
     
@@ -160,6 +159,7 @@ footer {
 
 
     // var declarations for input id elements //
+
     // group 1 //
     var rd1 = document.getElementById("pt");
     var rd2 = document.getElementById("gp");
@@ -177,13 +177,14 @@ footer {
     var rd11 = document.getElementById("no3");
     var rd12 = document.getElementById("dm4");
 
+
     // form //
     var fo1 = document.getElementById("form");
 
 
 
 
-
+    // if else section //
 
     // (rd1) conditional that checks user input, Helsinki South and Helsinki Central //
 
@@ -203,8 +204,14 @@ footer {
     helsinkie.setOpacity(0.0);
     oster.setOpacity(0.0);
 
-    helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South").openPopup();
-    helsinkice.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki Central").openPopup();
+
+    // sets the map to be lower in opacity //
+
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+    helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South:<br>Kluuvi, Kamppi, Etu-Töölö").openPopup();
+    helsinkice.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki Central:<br>Pasila, Kallio, Alppila").openPopup();
+
 
 
 
@@ -233,9 +240,13 @@ footer {
     helsinkie.setOpacity(1.0);
     oster.setOpacity(0.0);
 
-    helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South").openPopup();
-    helsinkie.bindPopup("<b>You also might like cheaper housing prices and good service availability.</b><br></br>Helsinki East").openPopup();
-    helsinkise.bindPopup("<b>You like good public transport and good housing.</b><br></br>Helsinki Southeast").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+    helsinkis.bindPopup("<b>You like good public transport and good service availability.</b><br></br>Helsinki South:<br>Kluuvi, Kamppi, Etu-Töölö").openPopup();
+    helsinkie.bindPopup("<b>You also might like cheaper housing prices and good service availability.</b><br></br>Helsinki East:<br>Itäkeskus, Myllypuro, Kontula").openPopup();
+    helsinkise.bindPopup("<b>You like good public transport and good housing.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
 
 
 
@@ -264,8 +275,13 @@ footer {
     oster.setOpacity(0.0);
 
 
-    helsinkie.bindPopup("<b>You might like cheaper housing prices and good service availability.</b><br></br>Helsinki East").openPopup();
-    helsinkine.bindPopup("<b>You might like cheaper housing prices and okay service availability.</b><br></br>Helsinki Northeast").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkie.bindPopup("<b>You might like cheaper housing prices and good service availability.</b><br></br>Helsinki East:<br>Itäkeskus, Myllypuro, Kontula").openPopup();
+    helsinkine.bindPopup("<b>You might like cheaper housing prices and okay service availability.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
 
 
 
@@ -294,8 +310,15 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
-    helsinkin.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki North").openPopup();
-    helsinkine.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki Northeast").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+
+    helsinkin.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki North:<br>Pakila, Oulunkylä, Paloheinä").openPopup();
+    helsinkine.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
     oster.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
@@ -324,8 +347,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
-    helsinkise.bindPopup("<b>You prefer okay service availability, good parking and a quieter area.</b><br>Helsinki Southeast").openPopup();
-    oster.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Östersundom<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkise.bindPopup("<b>You prefer okay service availability, good parking and a quieter area.</b><br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
+    oster.bindPopup("<b>You prefer good parking and a quieter area.</b><br>Östersundom:<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
 
@@ -358,7 +387,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(0.0);
 
-    helsinkie.bindPopup("<b>You prefer okay service availability, good parking and a cheaper area.</b><br>Helsinki East").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+
+    helsinkie.bindPopup("<b>You prefer okay service availability, good parking and a cheaper area.</b><br>Helsinki East:<br>Itäkeskus, Myllypuro, Kontula").openPopup();
 
 
     for(var i=0 ;i<fo1.length; i++)
@@ -388,6 +424,12 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(1.0);
 
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
     helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
 
@@ -416,8 +458,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(0.0);
 
-    helsinkin.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast").openPopup();
-    helsinkie.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki East<br>Itäkeskus<br>Myllypuro").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkin.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
+    helsinkie.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki East:<br>Itäkeskus<br>Myllypuro").openPopup();
 
 
 
@@ -444,7 +492,12 @@ fo1[i].checked = false;
     oster.setOpacity(0.0);
 
 
-    helsinkine.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkine.bindPopup("<b>You prefer cheap housing prices.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
 
 
     for(var i=0; i<fo1.length; i++)
@@ -471,11 +524,16 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(0.0);
 
-    // personalize these again //
-    helsinkis.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki South").openPopup();
-    helsinkice.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Central").openPopup();
-    helsinkise.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki Southeast").openPopup();
-    helsinkiwe.bindPopup("<b>The price of housing is irrelevant to you.</b><br></br>Helsinki West").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkis.bindPopup("<b>This is the most central area available with the highest housing prices.</b><br></br>Helsinki South:<br>Kluuvi, Kamppi, Etu-Töölö").openPopup();
+    helsinkice.bindPopup("<b>This is a nice central area in Helsinki with a lot of everyday services and activities.</b><br></br>Helsinki Central:<br>Pasila, Kallio, Alppila").openPopup();
+    helsinkise.bindPopup("<b>This is a quieter area and more secluded area that still has a good amount of services.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
+    helsinkiwe.bindPopup("<b>This is a quieter area and more secluded area that still has a good amount of services.</b><br></br>Helsinki West:<br>Haaga, Pitäjänmäki, Kannelmäki").openPopup();
 
 
 
@@ -503,10 +561,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
  
-    helsinkiwe.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki West").openPopup();
-    helsinkise.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki Southeast").openPopup();
-    oster.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Östersundom").openPopup();
+    helsinkiwe.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki West:<br>Haaga, Pitäjänmäki, Kannelmäki").openPopup();
+    helsinkise.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
+    oster.bindPopup("<b>The price of housing is irrelevant to you but you prefer a quieter area.</b><br></br>Östersundom:<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
 for(var i=0; i<fo1.length; i++)
@@ -532,6 +594,11 @@ fo1[i].checked = false;
     helsinkise.setOpacity(1.0);
     helsinkie.setOpacity(1.0);
     oster.setOpacity(1.0);
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
 
     helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
@@ -559,9 +626,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(0.0);
 
-    helsinkis.bindPopup("<b>Most services are found at this area.</b><br></br>Helsinki South").openPopup();
-    helsinkice.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki Central").openPopup();
-    helsinkie.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki East").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkis.bindPopup("<b>Most services are found at this area.</b><br></br>Helsinki South:<br>Kluuvi, Kamppi, Etu-Töölö").openPopup();
+    helsinkice.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki Central:<br>Pasila, Kallio, Alppila").openPopup();
+    helsinkie.bindPopup("<b>A lot of services are found at this area.</b><br></br>Helsinki East:<br>Itäkeskus<br>Myllypuro").openPopup();
 
 
 
@@ -588,8 +660,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(0.0);
 
-    helsinkine.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Northeast").openPopup();
-    helsinkise.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Southeast").openPopup();
+
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkine.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
+    helsinkise.bindPopup("<b>This area has ok service availability and not a lot of noise.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
 
 
 
@@ -619,12 +697,16 @@ fo1[i].checked = false;
     oster.setOpacity(1.0);
 
 
-    // personalize these //
+    // sets the map to be lower in opacity //
     
-    helsinkin.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki North").openPopup();
-    helsinkiwe.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki West").openPopup();
-    helsinkine.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Helsinki Northeast").openPopup();
-    oster.bindPopup("<b>This area doesn't have a lot of services.</b><br></br>Östersundom").openPopup();
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    
+    helsinkin.bindPopup("<b>This area doesn't have a lot of services but is more secluded.</b><br></br>Helsinki North:<br>Pakila, Oulunkylä, Paloheinä").openPopup();
+    helsinkiwe.bindPopup("<b>This area doesn't have a lot of services but is more secluded.</b><br></br>Helsinki West:<br>Haaga, Pitäjänmäki, Kannelmäki").openPopup();
+    helsinkine.bindPopup("<b>This area doesn't have a lot of services but is more secluded.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
+    oster.bindPopup("<b>This area doesn't have a lot of services but is more secluded.</b><br></br>Östersundom:<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
     
 
@@ -651,12 +733,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
 
-    // personalize these //
 
-    helsinkin.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki North").openPopup();
-    helsinkise.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki Southeast").openPopup();
-    oster.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Östersundom").openPopup();
+    helsinkin.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Helsinki North:<br>Pakila, Oulunkylä, Paloheinä").openPopup();
+    helsinkise.bindPopup("<b>This area doesn't have a lot of noise and okay service availability.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
+    oster.bindPopup("<b>This area doesn't have a lot of noise and minimal service availability.</b><br></br>Östersundom:<br>Salmenkallio, Karhusaari, Puroniitty").openPopup();
 
 
 
@@ -684,7 +768,13 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(1.0);
 
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
     helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
+
 
     for(var i=0; i<fo1.length; i++)
 
@@ -711,10 +801,15 @@ fo1[i].checked = false;
     helsinkie.setOpacity(0.0);
     oster.setOpacity(1.0);
 
-    helsinkiwe.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki West").openPopup();
-    helsinkin.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki North").openPopup();
-    helsinkine.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Northeast").openPopup();
-    helsinkise.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Southeast").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkiwe.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki West:<br>Haaga, Pitäjänmäki, Kannelmäki").openPopup();
+    helsinkin.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki North:<br>Pakila, Oulunkylä, Paloheinä").openPopup();
+    helsinkine.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Northeast:<br>Malmi, Puistola, Tapanila").openPopup();
+    helsinkise.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Helsinki Southeast:<br>Kulosaari, Herttoniemi, Roihuvuori").openPopup();
     oster.bindPopup("<b>This area doesn't usually have a lot of noise.</b><br></br>Östersundom:<br>Karhusaari, Puroniitty, Talosaari").openPopup();
 
     for(var i=0; i<fo1.length; i++)
@@ -739,9 +834,14 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(0.0);
 
-    helsinkis.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki South").openPopup();
-    helsinkice.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki Central").openPopup();
-    helsinkie.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki East").openPopup();
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkis.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki South:<br>Kluuvi, Kamppi, Etu-Töölö").openPopup();
+    helsinkice.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki Central:<br>Pasila, Kallio, Alppila").openPopup();
+    helsinkie.bindPopup("<b>This might be a good area for you.</b><br></br>Helsinki East:<br>Itäkeskus<br>Myllypuro").openPopup();
 
     for(var i=0; i<fo1.length; i++)
 
@@ -767,9 +867,13 @@ fo1[i].checked = false;
     helsinkie.setOpacity(1.0);
     oster.setOpacity(1.0);
 
-    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
-    layer_GoogleHybrid_0.setOpacity(0.9);
+    // sets the map to be lower in opacity //
+    
+    layer_GoogleHybrid_0.setOpacity(0.7);
+
+
+    helsinkis.bindPopup("<b>Doesn't matter.</b><br>").openPopup();
 
 
 
@@ -801,6 +905,7 @@ fo1[i].checked = false;
         helsinkise.setOpacity(0.0);
         helsinkie.setOpacity(0.0);
         oster.setOpacity(0.0);
+
 
 
         // resets the p element to its default state by giving it an empty string //
