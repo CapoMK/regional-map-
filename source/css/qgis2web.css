@@ -50,7 +50,7 @@
 
         }
 
-        .button-5 {
+        .button {
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -84,17 +84,17 @@
             align-items: center;
           }
           
-          .button-5:hover,
-          .button-5:focus {
+          .button:hover,
+          .button:focus {
             background-color: #dbd5d0;
             box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
           }
           
-          .button-5:hover {
+          .button:hover {
             transform: translateY(-1px);
           }
           
-          .button-5:active {
+          .button:active {
             background-color: #93b9ca;
             box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
             transform: translateY(0);
