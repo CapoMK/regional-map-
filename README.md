@@ -187,3 +187,7 @@ We haven't updated this readme-file for ten days, oops. There has been quite a l
 ## 26.11.2021
 
 Matias worked on the functionalities, while the rest of the team tried to make the page itself more responsive and user-friendly. The scope of the project isn't as big as it was in the beginning, but the basic idea is there.
+
+## 29.11.2021
+
+We've been working on the site itself, as the functionalities are almost there. Now there's a slider, and the questions and the submit-button are clearer than before. We also started looking at possible ways of hosting our service online.
