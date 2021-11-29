@@ -190,4 +190,4 @@ Matias worked on the functionalities, while the rest of the team tried to make t
 
 ## 29.11.2021
 
-We've been working on the site itself, as the functionalities are almost there. Now there's a slider, and the questions and the submit-button are clearer than before.
+We've been working on the site itself, as the functionalities are almost there. Now there's a slider, and the questions and the submit-button are clearer than before. We also started looking at possible ways of hosting our service online.
