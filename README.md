@@ -194,4 +194,4 @@ We've been working on the site itself, as the functionalities are almost there. 
 
 ## 30.11.2021
 
-Today we tested having a png-banner on our site, but it wasn't all that great.
+Today we tested having a png-banner on our site, but it wasn't all that great. We spent a while testing the product and looking for flaws.
