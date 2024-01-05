@@ -3,7 +3,7 @@
 LINK TO TEST-SITE: https://capomk.github.io/regional-map-/
 
 ## This is the repository for our project.
-We are working on a project that will showcase different regional areas in Finland for someone who might be interested in moving. 
+This is a original school project made by students Jesse Hirvassalo, Matias Kuismanen and Santeri Arponen during the Fall 2021 semester. This 2024 fork has been forked over by me later on to work on later as a showcase of my technical and visionary capabilities with the Leaflet library, as well as other things. Any further updates related to this fork will be notified here later on. 
 
 ## 21.9.2021
 Today we began introducing ourselves on how to convert our upcoming data into SQL-format with a converter. We also downloaded MariaDB, as we want to turn the data into more readable format and also look at it in a database.
