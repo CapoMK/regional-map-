@@ -47,10 +47,10 @@ footer {
 
         <title>Where to live</title>
 
-<script type="text/javascript">
+        <script type="text/javascript">
 
 
-</script>
+        </script>
 
 
     </head>
@@ -60,21 +60,21 @@ footer {
 
         
         <br>
-    </br>
+        </br>
 
         <h1>Where to Live</h1>
 
 
         <br>
-    </br>
+        </br>
 
     <h2>This map will pick the perfect area inside Helsinki for you to live.</h2>
-    <br>
+        <br>
 
 <h3>First we need to know a couple of things about you.</h3>
 
-<br>
-</br>
+        <br>
+        </br>
 
     <form id ="form">
 
@@ -86,7 +86,7 @@ footer {
 </div>
 
 
-  <br>
+        <br>
 
   <div class="transbox">
   <p><b>What price range are you looking for?</b><br>
@@ -96,7 +96,7 @@ footer {
 </div>
 
 
-  <br>
+        <br>
 
   <div class="transbox">
   <p><b>Would you like your area to be full of everyday services and activities?</b><br>
@@ -106,7 +106,7 @@ footer {
 </div>
 
 
-  <br>
+        <br>
 
   <div class="transbox">
   <p><b>Does the level of noise affect your housing area decision?</b><br>
@@ -117,7 +117,7 @@ footer {
 
 </form>
 
-<br>
+        <br>
 
 
 <button type="button" class="button" role="button" onclick=Pohina() {>Submit</button>
@@ -134,9 +134,6 @@ footer {
 
 <script>
 
-
-
-
  /* The function should be able to do the following things: 
   
     1. Adjust the opacity of the marker to make it pop up after clicking 'submit'.
@@ -146,14 +143,6 @@ footer {
     4. The function must also specify the areas in plural that are suitable for the respondent. 
     
     */
-
-
-
-
-
-
-
-
 
     // the meat of the function itself //
     function Pohina() {
@@ -186,8 +175,6 @@ footer {
     if(rd1.checked == true && rd5.checked == true && rd7.checked == true && rd11.checked == true){
 
     document.getElementById("output").innerHTML = "<br>These are the perfect areas for you.</br>";
-
-
 
     // defines the opacity of the selected markers //
     helsinkis.setOpacity(1.0);
