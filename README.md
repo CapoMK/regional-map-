@@ -9,6 +9,8 @@ This is a original school project made by students Jesse Hirvassalo, Matias Kuis
 
 In the future the plan is to start developing this fork of the barebones 2021 web app school project into a fully-fledged web application, with also a mobile app in mind for the future. The questions should be fledged out more and more additions should be made to make the map more interactive and graphically appealing as well. This type of a web application doesn't exist yet for even the whole of Finland in its entirety, so in essence the whole scope of the project could be fleshed out in that regard. First, the scope should stay within Helsinki for now, but in the future it should be fleshed out to give information and insights in an all in one instructional package about the whole of Finland, taking of course into account the the needs and wants and extra criteria of the user. Most likely Django should be integrated into the project, if the scope exceeds basic functionality. 
 
+Reset button or similar functionality should be added in a user friendly way to reset the changes back to normal once done. This can be done with JS. 
+
 ## 21.9.2021
 Today we began introducing ourselves on how to convert our upcoming data into SQL-format with a converter. We also downloaded MariaDB, as we want to turn the data into more readable format and also look at it in a database.
 We also added Google Hybrid -map into GIS, as it gives a more refined UI on our map compared to OpenStreetMap, and it's more user-friendly while looking for a place to live. We looked for more information on our upcoming steps and are trying to figure out how to implement our data on to the map.
