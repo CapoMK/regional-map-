@@ -5,6 +5,10 @@ LINK TO NEW TEST-SITE: https://capomk25.github.io/regional-map-2024/
 ## This is the repository for our project.
 This is a original school project made by students Jesse Hirvassalo, Matias Kuismanen and Santeri Arponen during the Fall 2021 semester. This 2024 fork has been forked over by me later on to work on later as a showcase of my technical and visionary capabilities with the Leaflet library, as well as other things. Any further updates related to this fork will be notified here later on. 
 
+## 6.2.2024 Future additions to the fork. 
+
+In the future the plan is to start developing this fork of the barebones 2021 web app school project into a fully-fledged web application, with also a mobile app in mind for the future. The questions should be fledged out more and more additions should be made to make the map more interactive and graphically appealing as well. This type of a web application doesn't exist yet for even the whole of Finland in its entirety, so in essence the whole scope of the project could be fleshed out in that regard. First, the scope should stay within Helsinki for now, but in the future it should be fleshed out to give information and insights in an all in one instructional package about the whole of Finland, taking of course into account the the needs and wants and extra criteria of the user.
+
 ## 21.9.2021
 Today we began introducing ourselves on how to convert our upcoming data into SQL-format with a converter. We also downloaded MariaDB, as we want to turn the data into more readable format and also look at it in a database.
 We also added Google Hybrid -map into GIS, as it gives a more refined UI on our map compared to OpenStreetMap, and it's more user-friendly while looking for a place to live. We looked for more information on our upcoming steps and are trying to figure out how to implement our data on to the map.
@@ -13,9 +17,6 @@ We also updated our project plan and returned it once again.
 ## 24.9.2021
 Today we started looking into Python and 'Pandas', in order to import excel files (our data for the project) into python, and from there, to our map.
 We downloaded Anaconda and Pandas and used some time to familiarize ourselves with these. We also tried to find some more open data that we could use and implement onto our map. Familiarizing ourselves with new platforms takes surprisingly a lot of time.
-
-
-
 
 
 ## 29.9.2021 
